@@ -1,0 +1,226 @@
+* {
+    font-family: "Alkatra", cursive;
+}
+
+body {
+    background-image: url("../images/bg-pattern.png");
+}
+::selection {
+    background-color: #716add;
+    color: white;
+}
+
+.bi-person-circle,
+.nav-pills {
+    position: -webkit-sticky !important;
+    position: sticky !important;
+    top: 5rem;
+}
+/* --->Navbar */
+/* Estilos para pantallas pequeñas */
+@media (max-width: 576px) {
+    .sticky-top {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .txtTittle {
+        margin-top: 1rem;
+        font-size: 0.3rem;
+    }
+
+    .nav-item {
+        margin-top: 0.5rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .nav-link {
+        margin: 0.2rem;
+        padding: 0.3rem 1rem;
+        font-size: 0.7rem;
+        border-radius: 5rem;
+    }
+}
+
+/* Estilos para pantallas medianas y grandes */
+@media (min-width: 577px) {
+    .sticky-top {
+        flex-wrap: nowrap;
+        justify-content: space-between;
+    }
+
+    .txtTittle {
+        margin-top: 3rem;
+        font-size: 0.8rem;
+    }
+
+    .nav-item {
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    .nav-link {
+        padding: 0.5rem 3rem;
+        font-size: 0.8rem;
+        margin-bottom: -10rem;
+        margin-top: 9.5rem;
+    }
+}
+
+.sticky-top {
+    box-shadow: 2px 0 10px -5px rgba(0, 0, 0, 0.3);
+    background-color: lightcyan !important;
+    display: flex;
+    transition: all 0.3s ease;
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
+    top: 1.2rem;
+}
+
+.txtTittle {
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
+    top: 1.2rem;
+    border-radius: 2px;
+    font-weight: bold;
+    margin-bottom: 5rem;
+    font-size: 1.25rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: black;
+    text-shadow: 2px 2px 4px white;
+    background-image: url("../images/otrocli.gif");
+    border-radius: 2rem;
+    border-style: solid;
+    border-color: lightblue;
+    background-size: cover;
+    background-position: center;
+    padding: 20px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease-in-out;
+}
+
+.nav-link {
+    padding: 0.5rem 3rem;
+    border-radius: 5rem;
+    color: black !important;
+    background-color: rgb(255, 255, 255);
+    font-size: medium;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+    position: -webkit-sticky !important;
+    position: sticky !important;
+    top: 1.2rem;
+}
+
+.nav-link:hover {
+    background-color: black !important;
+    color: white !important;
+}
+
+/* Agregar clase active para la página actual */
+.active {
+    background-color: slategray !important;
+    color: white !important;
+}
+
+@keyframes slideIn {
+    0% {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0%);
+    }
+}
+
+.container-fluid {
+    animation-name: slideIn;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+
+/* Ocultar navbar */
+@keyframes hide-navbar {
+    0% {
+        opacity: 1;
+    }
+    70% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .container-fluid {
+        animation-name: hide-navbar;
+        animation-duration: 0.5s;
+        animation-fill-mode: forwards;
+    }
+
+    .nav-link {
+        padding: 0.5rem 1rem !important;
+        font-size: 0.7rem !important;
+        margin: 0.2rem !important;
+    }
+
+    .txtTittle {
+        margin-top: 1px;
+        margin-bottom: 0;
+        font-size: 0.3rem !important;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .container-fluid {
+        animation-name: slideIn;
+        animation-duration: 0.5s;
+        animation-fill-mode: forwards;
+    }
+}
+
+/* fin Navbar---> */
+/* Dark THEME */
+body.dark-theme {
+    background-color: #192229 !important;
+    background-image: url("#");
+}
+.dark-theme .txtTittle {
+    border-color: rgb(47, 94, 47);
+}
+.dark-theme .sticky-top {
+    background-color: #212e36 !important;
+    border-color: #2a3b47 !important;
+    color: #eff3f5 !important;
+}
+.dark-theme .nav-link {
+    color: #eff3f5 !important;
+    background-color: #2a3b47 !important;
+}
+.dark-theme .nav-link.active {
+    color: #eff3f5 !important;
+    background-color: #192229 !important;
+}
+.dark-theme .nav-link:hover {
+    color: black !important;
+    background-color: #eff3f5 !important;
+}
+
+.dark-theme .dropdown ul {
+    background-color: #2a3b47 !important;
+}
+.dark-theme .dropdown ul label {
+    background-color: #2a3b47 !important;
+    color: #eff3f5;
+}
+.dark-theme .dropdown button {
+    background-color: black !important;
+    color: white;
+}
+.dark-theme .dropdown button:hover {
+    background-color: #eff3f5 !important;
+    color: black;
+}

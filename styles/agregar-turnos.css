@@ -1,0 +1,230 @@
+/* --->FORMULARIO TURNOS */
+
+form {
+    max-width: 600px; /* Ancho máximo del formulario */
+    margin: 0 auto; /* Centrado horizontal del formulario */
+    padding: 40px; /* Espaciado interno del formulario */
+    border-radius: 10px; /* Bordes redondeados del formulario */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); /* Sombra del formulario */
+    background-color: rgb(234, 241, 241); /* Fondo del formulario */
+    color: black; /* Color del texto del formulario */
+}
+/* Títulos/etiquetas del formulario */
+label {
+    display: block; /* Cada etiqueta en su propia línea */
+    margin-bottom: 10px; /* Espaciado entre etiquetas */
+    font-size: 18px; /* Tamaño de fuente de las etiquetas */
+    font-weight: bold; /* Texto en negrita */
+}
+select {
+    display: block; /* Cada etiqueta en su propia línea */
+    margin-bottom: 10px; /* Espaciado entre etiquetas */
+    font-size: 18px; /* Tamaño de fuente de las etiquetas */
+    font-weight: bold; /* Texto en negrita */
+    color: black;
+}
+
+/* Campos del formulario */
+input[class="dni"],
+input[class="apellido"],
+input[class="nombre"],
+input[class="email"],
+input[class="telefono"],
+input[type="date"],
+select[id="area"],
+select[id="dia"],
+select[id="hora"],
+select[id="obra"] {
+    display: block; /* Cada campo en su propia línea */
+    width: 100%; /* Ancho del campo al 100% */
+    padding: 15px; /* Espaciado interno del campo */
+    margin-bottom: 20px; /* Espaciado inferior del campo */
+    border: none; /* Sin borde */
+    border-radius: 10px; /* Bordes redondeados del campo */
+    background-color: rgb(248, 248, 248); /* Fondo semitransparente del campo */
+    color: black; /* Color del texto del campo */
+    font-size: 18px; /* Tamaño de fuente de los campos */
+}
+option[class="disabled"] {
+    color: #aaa !important;
+}
+
+/* Botón del formulario */
+button[type="submit"] {
+    display: inline-block;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 10px;
+    background-color: #fff;
+    color: lightskyblue;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+button[type="submit"]:hover {
+    background-color: slategray;
+    color: #fff;
+}
+
+/* Estilos para la animación de desvanecimiento */
+form.fade-in {
+    opacity: 1; /* Formulario visible al aparecer */
+}
+.form1 {
+    display: none;
+}
+.form2 {
+    display: none;
+}
+.form3 {
+    display: none;
+}
+/* Estilos para las pestañas navegación del form */
+.btnTabContainer {
+    text-align: center;
+    padding: 1.5rem;
+    position: unset;
+    border-top: 1px solid #ccc;
+    border-bottom: 2px solid #ccc;
+    margin-top: 0.8rem; /* Ajusta el valor según sea necesario */
+    margin-bottom: 1rem;
+    background-color: white;
+}
+.btnTab {
+    background-color: #ccc;
+    border: none;
+    color: black;
+    padding: 1rem;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1.2rem;
+    margin-right: 1.2rem;
+    border-bottom: 0rem !important;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.btnTab:after {
+    content: "";
+    position: absolute;
+    right: -10px;
+    top: 50%;
+    transform: translateY(-50%);
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-left: 10px solid #ccc;
+}
+
+.btnTab.active {
+    color: #f1f1f1 !important;
+    background-color: slategray !important;
+}
+
+.btnTab.active:after {
+    border-left-color: slategray !important;
+}
+
+.btnTab:hover {
+    background-color: #f1f1f1;
+}
+
+.btnTab:hover:after {
+    border-left-color: #f1f1f1;
+}
+
+/* Estilos para ocultar los formularios */
+.formContent {
+    display: none;
+}
+
+/* Estilos específicos para cada formulario */
+#form1 {
+    display: block;
+}
+/* fin FORMULARIO TURNOS --->*/
+
+/* Sweet Alert */
+.colored-toast.swal2-icon-success {
+    background-color: #a5dc86 !important;
+}
+/* INPUTs*/
+.valid-input {
+    border: 1px solid green !important; /* Estilo para el borde cuando el valor es válido */
+}
+
+/* themeToggleButton */
+@media (prefers-color-scheme: dark) {
+    /* Estilos específicos para el tema oscuro */
+    body {
+        background-color: #333;
+        color: #fff;
+    }
+}
+@media (prefers-color-scheme: light) {
+    /* Estilos específicos para el tema claro */
+    body {
+        background-color: #fff;
+        color: #333;
+    }
+}
+
+/*-------> DARK THEME */
+
+/* FORMS */
+.dark-theme form {
+    color: #eff3f5 !important;
+    background-color: #212e36 !important;
+    border-color: #2a3b47 !important;
+}
+
+/* SELECTS */
+.dark-theme label {
+    color: #eff3f5 !important;
+    background-color: #212e36 !important;
+    border-color: #2a3b47 !important;
+}
+.dark-theme .btnTabContainer {
+    background-color: #212e36 !important;
+    border-color: #2a3b47 !important;
+}
+.dark-theme input,
+select {
+    color: #192229;
+    background-color: #c8cdd0;
+    border-color: #2a3b47;
+}
+
+.dark-theme select[id="area"],
+.dark-theme select[id="dia"],
+.dark-theme select[id="hora"],
+.dark-theme select[id="obra"] {
+    color: #192229;
+    background-color: #c8cdd0;
+    border-color: #2a3b47;
+}
+.dark-theme button[type="submit"] {
+    background-color: #2a3b47;
+    color: #fff;
+}
+.dark-theme button[type="submit"]:hover {
+    background-color: #c8cdd0;
+    color: #192229;
+}
+
+.dark-theme .btnTab.active {
+    color: #f1f1f1 !important;
+    background-color: #2a3b47 !important;
+}
+
+.dark-theme .btnTab.active:after {
+    border-left-color: #2a3b47 !important;
+}
+/* Sweet Alert */
+.dark-theme .colored-toast.swal2-icon-success {
+    background-color: #3b6835 !important;
+    color: #fff !important;
+}

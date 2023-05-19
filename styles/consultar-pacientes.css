@@ -1,0 +1,135 @@
+/* -->CONSULTAR TURNOS */
+.search1 {
+    position: relative;
+    top: 2rem; /* Ajusta el valor según sea necesario */
+}
+
+.input-group {
+    top: 0.35rem;
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.input-group-prepend button {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.form-control {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+/* Estilos adicionales para resaltar el elemento de búsqueda */
+.search1 {
+    background-color: white;
+    padding: 10px;
+    border: 1px solid lightblue;
+    border-radius: 5px;
+}
+
+.search1 .input-group-prepend button {
+    background-color: lightblue;
+    color: #fff;
+}
+
+.search1 .form-control {
+    border-color: lightblue;
+}
+
+.search1 .form-control:focus {
+    box-shadow: none;
+    border-color: black;
+}
+
+.tittle {
+    text-align: center;
+    margin-bottom: 20px;
+    margin-top: 4rem;
+    font-size: 3rem;
+    border-top-left-radius: 22px;
+    border-top-right-radius: 22px;
+    background-color: #f5f5f5;
+    border-top: 2px solid lightblue;
+}
+
+/* Estilos para la tabla */
+#resultadoTabla {
+    contain: content;
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+    font-size: 14px;
+    line-height: 1.4;
+    display: inline-table;
+    z-index: 5;
+    text-align: center;
+}
+
+/* Estilos para las filas de encabezado */
+#resultadoTabla thead tr {
+    background-color: #fff;
+    border: 1px solid lightblue;
+}
+
+/* Estilos para las celdas de encabezado */
+#resultadoTabla th {
+    padding: 10px;
+    text-align: center;
+    font-weight: bold;
+}
+
+/* Estilos para las filas de datos */
+#resultadoTabla tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+/* Estilos para las celdas de datos */
+#resultadoTabla td {
+    padding: 10px;
+}
+thead,
+td {
+    padding: 12px;
+    text-align: center; /* Centra el contenido de las celdas */
+    border-bottom: 1px solid #e6e6e6;
+    color: #505050;
+}
+/* Dark THEME */
+.dark-theme .search1 {
+    background-color: #212e36 !important;
+    border-color: green !important;
+}
+.dark-theme .search1 .input-group-prepend button {
+    background-color: #2a3b47 !important;
+
+    color: #f2f2f2 !important;
+}
+.dark-theme .tittle {
+    background-color: #212e36 !important;
+    border-color: green !important;
+    color: #f2f2f2 !important;
+}
+
+.dark-theme #resultadoTabla th {
+    background-color: #212e36 !important;
+    border-color: #2a3b47 !important;
+    color: #eff3f5 !important;
+}
+
+.dark-theme #resultadoTabla td {
+    background-color: #5c6e7c !important;
+    border-color: #2a3b47 !important;
+    color: black !important;
+}
+.dark-theme #resultadoTabla thead tr {
+    background-color: #2a3b47 !important;
+    border-color: #2a3b47 !important;
+    color: #f2f2f2 !important;
+}
+.dark-theme #resultadoTabla tbody {
+    background-color: #2a3b47 !important;
+    border-color: #2a3b47 !important;
+    color: #2a3b47 !important;
+}

@@ -1,0 +1,112 @@
+/* -->GESTIÓN DE TURNOS */
+.tittle {
+    text-align: center;
+    margin-bottom: 20px;
+    margin-top: 2.2rem;
+    font-size: 3rem;
+    border-top-left-radius: 22px;
+    border-top-right-radius: 22px;
+    background-color: #f5f5f5;
+    border-top: 2px solid lightblue;
+}
+
+/* Estilos para la tabla */
+table {
+    contain: content;
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    margin-top: 50px; /* Incrementa el margen superior */
+    font-size: 14px;
+    line-height: 1.4;
+    display: inline-flexbox;
+    z-index: 0; /* Agrega un z-index menor para que se muestre detrás del navbar */
+    text-align: center; /* Centra el contenido de la tabla */
+    margin-left: -1.5rem;
+}
+
+thead,
+td {
+    padding: 12px;
+    text-align: center; /* Centra el contenido de las celdas */
+    border-bottom: 1px solid #e6e6e6;
+    color: #505050;
+}
+
+th {
+    background-color: #f7f7f7;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+h2 {
+    font-size: 2rem;
+    text-align: center;
+    margin-top: 50px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #505050;
+    margin-bottom: 50px; /* Agrega un margen inferior */
+}
+
+.tablaGestion {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 20px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease-in-out;
+    border-radius: 5px;
+    margin: auto;
+    z-index: 2; /* Establece un z-index mayor que el z-index del elemento que se superpone */
+}
+
+tfoot {
+    background-image: url("./../images/gatito.webp");
+}
+/* fin Gestión de TURNOS --->*/
+
+/* Sweet Alert */
+.colored-toast.swal2-icon-info {
+    background-color: #3fc3ee !important;
+}
+
+/* Dark THEME */
+
+.dark-theme .tittle {
+    background-color: #212e36 !important;
+    border-color: green !important;
+    color: #f2f2f2 !important;
+}
+.dark-theme th {
+    background-color: #212e36 !important;
+    border-color: #2a3b47 !important;
+    color: #eff3f5 !important;
+}
+
+.dark-theme td {
+    background-color: #5c6e7c !important;
+    border-color: #2a3b47 !important;
+    color: black !important;
+}
+.dark-theme thead tr {
+    background-color: #212e36 !important;
+    border-color: #2a3b47 !important;
+    color: #f2f2f2 !important;
+}
+.dark-theme table tfoot td {
+    background-color: #212e36 !important;
+    border-color: #2a3b47 !important;
+    color: #f2f2f2 !important;
+    background-image: url("#");
+}
+.dark-theme table tfoot td button#llenarTabla {
+    background-color: #212e36 !important;
+}
+.dark-theme table tfoot td button {
+    background-color: #212e36 !important;
+}
+/* Sweet Alert */
+.dark-theme .colored-toast.swal2-icon-info {
+    background-color: #195f23 !important;
+    color: #f2f2f2;
+}

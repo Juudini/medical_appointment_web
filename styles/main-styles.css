@@ -1,0 +1,378 @@
+* {
+    font-family: "Alkatra", cursive;
+}
+
+body {
+    background: url("#");
+    background-size: cover;
+    background-position: center;
+    opacity: 0.9;
+}
+
+/* Pre-Header */
+
+.preHeader {
+    background-color: white;
+    height: 4.1rem;
+    text-align: center;
+    box-sizing: border-box;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+    text-shadow: none;
+    padding: 1rem;
+    margin-bottom: 12px;
+    align-items: center;
+    display: flex;
+    justify-content: space-between; /* Alinear los botones a la derecha */
+}
+
+.preHeader a {
+    font-size: 1.2rem;
+    color: black;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border: 2px solid black;
+    border-radius: 2rem;
+    transition: background-color 0.3s ease;
+}
+
+.preHeader a:hover {
+    background-color: black;
+    color: white;
+}
+
+/* Botones Loggin */
+.preHeader .logout-btn {
+    margin-left: 10px;
+}
+
+.preHeader .home-btn {
+    display: flex;
+    justify-content: center;
+}
+
+/* fin PreHeader---> */
+
+.txtPagina {
+    text-align: center;
+}
+/* CLINICA ONLINE  */
+.txtTittle {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: black;
+    text-shadow: 2px 2px 4px white;
+    background-image: url("../images/otrocli.gif");
+    border-radius: 2rem;
+    border-style: solid;
+    border-color: lightblue;
+    background-size: cover;
+    background-position: center;
+    padding: 20px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease-in-out;
+}
+
+/* INICIO */
+.services-section {
+    background: radial-gradient(circle at top right, #fdfefe, #fdfefe, #cacaca);
+    padding: 7.2rem;
+    margin-top: 3rem;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 10rem;
+    align-items: center;
+    height: 38rem;
+    width: 100rem;
+    padding-left: 4.5rem;
+    outline: none;
+    border: none;
+    font-size: 1.125rem;
+    color: #595959;
+    box-shadow: inset 0.25rem 0.25rem 0.625rem #babecc,
+        inset -0.625rem -0.625rem 1.25rem #ffffff73;
+}
+
+@media screen and (max-width: 1440px) {
+    .services-section {
+        padding: 3rem;
+        height: auto;
+        width: 100%;
+        border-radius: 3rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .services-section {
+        padding: 2rem;
+        font-size: 1rem;
+    }
+}
+
+.services-section h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+}
+.services-section p {
+    text-align: center;
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+}
+.services-section ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.services-section a {
+    width: 100%;
+    max-width: 250px;
+    height: 200px;
+    margin: 20px auto;
+    border-radius: 21px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    transition: box-shadow 0.3s ease-in-out;
+    cursor: pointer;
+    color: #595959;
+}
+
+.services-section a:hover {
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Estilos adicionales para hacerlo responsive */
+@media screen and (max-width: 768px) {
+    .services-section a {
+        width: 100%;
+        max-width: none;
+    }
+}
+
+.services-section a {
+    font-size: 1.1rem;
+    line-height: 1.5;
+}
+/* Color de los servicios */
+.services-list a.service-1 {
+    color: white;
+    background: linear-gradient(to bottom, #0077cc, #004499);
+}
+
+.services-list a.service-2 {
+    color: white;
+    background: linear-gradient(to bottom, #00cc66, #007a3d);
+}
+
+.services-list a.service-4 {
+    color: white;
+    background: linear-gradient(to bottom, #6600cc, #330066);
+}
+
+/* Efecto flotante de los servicios */
+.services-list a {
+    transform: translateY(-20px);
+    transition: transform 0.2s ease-out;
+}
+.services-list a:hover {
+    transform: translateY(-10px);
+}
+/* -->ANIMACIÓNES  INICIO*/
+.services-section h2 {
+    animation: fade-in 1s ease-out;
+}
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+/* FOOTER */
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: white;
+    padding: 20px;
+    text-align: center;
+    border-top: 1px solid #e9ecef;
+    box-shadow: 0 -2px 6px rgba(0, 0, 0, 0.3);
+    height: auto;
+    z-index: 9999;
+}
+
+.footer h5 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    color: black;
+    text-align: center;
+}
+.footer p.tittleP {
+    color: black;
+}
+.footer p {
+    color: #666;
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 0;
+}
+.footer a {
+    color: black;
+}
+.footer a i:hover {
+    color: #4078c0;
+}
+/* -->ANIMACIÓNES */
+.typewriter {
+    overflow: hidden;
+    white-space: nowrap;
+    font-size: 1.5rem;
+    border-right: 2px solid black;
+    padding-right: 10px;
+}
+.typewriter {
+    animation: typing 2s steps(40) forwards, blink-caret 0.75s step-end infinite;
+}
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+@keyframes blink-caret {
+    from,
+    to {
+        border-color: transparent;
+    }
+    50% {
+        border-color: black;
+    }
+}
+/* LOGIN */
+/* Importing fonts from Google */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+
+/* login */
+
+body {
+    background: #ecf0f3;
+}
+
+#login-form {
+    text-align: center;
+    margin-top: 200px;
+}
+
+.wrapper {
+    max-width: 350px;
+    min-height: 500px;
+    margin: 80px auto;
+    padding: 40px 30px 30px 30px;
+    background-color: #ecf0f3;
+    border-radius: 15px;
+    box-shadow: 13px 13px 20px #cbced1, -13px -13px 20px #fff;
+}
+
+.logo {
+    width: 80px;
+    margin: auto;
+}
+
+.logo img {
+    width: 100%;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 50%;
+    box-shadow: 0px 0px 3px #5f5f5f, 0px 0px 0px 5px #ecf0f3,
+        8px 8px 15px #a7aaa7, -8px -8px 15px #fff;
+}
+
+.wrapper .name {
+    font-weight: 600;
+    font-size: 1.4rem;
+    letter-spacing: 1.3px;
+    padding-left: 10px;
+    color: #555;
+}
+
+.wrapper .form-field input {
+    width: 100%;
+    display: block;
+    border: none;
+    outline: none;
+    background: none;
+    font-size: 1.2rem;
+    color: #666;
+    padding: 10px 15px 10px 10px;
+    /* border: 1px solid red; */
+}
+
+.wrapper .form-field {
+    padding-left: 10px;
+    margin-bottom: 20px;
+    border-radius: 20px;
+    box-shadow: inset 8px 8px 8px #cbced1, inset -8px -8px 8px #fff;
+}
+
+.wrapper .form-field .fas {
+    color: #555;
+}
+
+.wrapper .btn {
+    box-shadow: none;
+    width: 100%;
+    height: 40px;
+    background-color: #716add;
+    color: #fff;
+    border-radius: 25px;
+    box-shadow: 3px 3px 3px #b1b1b1, -3px -3px 3px #fff;
+    letter-spacing: 1.3px;
+}
+
+.wrapper .btn:hover {
+    background-color: #039be5;
+}
+
+.wrapper a {
+    text-decoration: none;
+    font-size: 0.8rem;
+    color: #03a9f4;
+}
+
+.wrapper a:hover {
+    color: #039be5;
+}
+
+@media (max-width: 380px) {
+    .wrapper {
+        margin: 30px 20px;
+        padding: 40px 15px 15px 15px;
+    }
+}
+/* Granim */
+#canvas-basic {
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+}
+.input-error {
+    border-radius: red !important;
+    color: red !important;
+}

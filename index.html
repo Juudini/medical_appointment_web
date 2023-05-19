@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- Metadatos -->
+        <meta charset="UTF-8" />
+        <meta name="author" content="Juan Ignacio Debandi Chaves" />
+        <meta name="description" content="Proyecto Final" />
+        <meta name="keywords" content="HTML, CSS, JavaScript, Bootstrap" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta
+            name="theme-color"
+            media="(prefers-color-scheme: light)"
+            content="cyan" />
+        <meta
+            name="theme-color"
+            media="(prefers-color-scheme: dark)"
+            content="black" />
+        <!-- Meta datos Open Graph -->
+        <meta property="og:title" content="Proyecto Final" />
+        <meta property="og:description" content="Clínica Online Web Project" />
+        <meta property="og:type" content="website" />
+
+        <!-- Título -->
+        <title>| Proyecto Final</title>
+        <!-- Favicon -->
+        <link rel="icon" type="image/x-icon" href="#" />
+        <!-- Bootstrap CSS-->
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ"
+            crossorigin="anonymous" />
+        <!-- Bootstrap JS -->
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+            crossorigin="anonymous"></script>
+        <!-- Bootstrap ICONS -->
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css" />
+        <!-- CSS -->
+        <link href="./styles/main-styles.css" rel="stylesheet" />
+        <!-- FONT-FAMILY  -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Alkatra&display=swap"
+            rel="stylesheet" />
+        <!-- Background Granim -->
+        <script src="./scripts/granim.min.js"></script>
+    </head>
+    <body>
+        <!-- LOGIN -->
+        <canvas id="canvas-basic"></canvas>
+
+        <div id="login-form" class="wrapper">
+            <div class="logo">
+                <img src="./images/gatito.webp" alt="user-foto" />
+            </div>
+            <div class="text-center mt-4 name">Admin</div>
+            <form class="p-3 mt-3">
+                <div class="form-field d-flex align-items-center">
+                    <span class="bi bi-person"></span>
+                    <input
+                        type="text"
+                        name="usuario"
+                        id="user"
+                        placeholder="Usuario" />
+                </div>
+                <div class="form-field d-flex align-items-center">
+                    <span class="bi bi-key"></span>
+                    <input
+                        type="password"
+                        name="password"
+                        id="password"
+                        placeholder="Contraseña" />
+                </div>
+                <button id="btnLogin" class="btn mt-3">Iniciar Sesión</button>
+            </form>
+            <!-- <div class="text-center fs-6">
+                <a href="#">Olvidaste la contraseña?</a> or
+                <a href="#">Registrate</a>
+            </div> -->
+        </div>
+        <!-- Main -->
+        <main id="main-content" style="display: none">
+            <!--Pre-Header-->
+            <div class="preHeader">
+                <a class="navbar-brand txtTittle" href="#"
+                    >| CLÍNICA ONLINE |</a
+                >
+                <div class="buttons">
+                    <a href="./index.html" class="btn">Salir</a>
+                </div>
+            </div>
+            <section class="services-section">
+                <h2>Servicios:</h2>
+                <ul class="services-list" type="button">
+                    <a class="service-2" href="./pages/agregar-turnos.html">
+                        Agregar Turno
+                    </a>
+                    <a href="./pages/consultar-paciente.html" class="service-1">
+                        Consultar Pacientes
+                    </a>
+                    <a
+                        class="service-4"
+                        href="./pages/consultar-paciente.html"
+                        type="button">
+                        Gestionar Turno
+                    </a>
+                </ul>
+            </section>
+            <!-- Footer -->
+            <footer class="footer">
+                <div class="container">
+                    <div class="row justify-content-center align-items-center">
+                        <div class="col-md-12 text-center">
+                            <h3 class="typewriter">CLÍNICA ONLINE</h3>
+                            <p class="tittleP">
+                                Atención médica en línea accesible y de calidad.
+                            </p>
+                        </div>
+                        <div class="col-md-4 text-center">
+                            <a href="https://github.com/Juudini">
+                                <i class="bi bi-github fs-3"></i>
+                            </a>
+                        </div>
+                        <div class="col-md-12 text-center">
+                            <p>
+                                © 2023 Clínica Online. Todos los derechos
+                                reservados.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </main>
+
+        <script src="./scripts/main.js"></script>
+    </body>
+</html>
