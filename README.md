@@ -4,7 +4,7 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-<h2><a href='https://apimocha.com/paciente'>API</a> | <a href='https://juudini-proyecto-final-javascript.netlify.app/'>WEB</a></h2>
+<h2><a href='https://apimocha.com/paciente/data'>API</a> | <a href='https://juudini-proyecto-final-javascript.netlify.app/'>WEB</a></h2>
 </div>
 
 ![Web API Page](assets/web-api-page.png)
