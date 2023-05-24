@@ -39,9 +39,9 @@ form.addEventListener("submit", (e) => {
 });
 const obtenerDatos = () => {
     pedirDNI();
-    pedirApellido();
-    pedirNombre();
-    pedirEmail();
+    pedirApellido().toUpperCase();
+    pedirNombre().toUpperCase();
+    pedirEmail().toLowerCase();
     pedirTelefono();
 };
 
