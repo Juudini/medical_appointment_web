@@ -2,7 +2,7 @@
 <h1>🏥 | Clínica Online Web Project | 🩺</h1>
 <h2>Esta web de gestión de turnos médicos, está desarrollada como parte del proyecto final del curso de JavaScript en Coderhouse. Este proyecto no tiene ánimo de lucro y no se hace responsable del uso que se pueda hacer del mismo. </h2>
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) [![Netlify Status](https://api.netlify.com/api/v1/badges/87d4fe7d-7a52-4110-924a-32cf9595d605/deploy-status)](https://app.netlify.com/sites/juudini-proyecto-final-javascript/deploys)
 
 <h2><a href='https://apimocha.com/paciente/data'>API</a> | <a href='https://juudini-proyecto-final-javascript.netlify.app/'>WEB</a></h2>
 </div>
