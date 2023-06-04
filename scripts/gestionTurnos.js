@@ -29,14 +29,12 @@ const verDatos = () => {
         btnEliminar.setAttribute("btn-id", index);
         btnEliminar.classList.add("btn", "btn-danger", "btn-sm");
         eliminar.appendChild(btnEliminar);
-        // --> fin Botón Eliminar paciente
 
-        pacienteFila.appendChild(area);
-        pacienteFila.appendChild(fecha);
-        pacienteFila.appendChild(nombre);
-        pacienteFila.appendChild(obraSocial);
-        pacienteFila.appendChild(telefono);
-        pacienteFila.appendChild(eliminar);
+        //Agregando datos a la fila
+        let datos = [area, fecha, nombre, obraSocial, telefono, eliminar];
+        for (let dato of datos) {
+            pacienteFila.appendChild(dato);
+        }
         tablaDatos.appendChild(pacienteFila);
 
         btnEliminar.addEventListener("click", (e) => {
@@ -45,6 +43,7 @@ const verDatos = () => {
         });
     });
 };
+
 // Botón eliminar (individual por paciente)
 const eliminarPaciente = (BTN_ID) => {
     Swal.fire({
