@@ -153,6 +153,9 @@ body {
         width: 100%;
         max-width: none;
     }
+    .services-section {
+        padding-bottom: 150px;
+    }
 }
 
 .services-section a {
