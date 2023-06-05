@@ -16,10 +16,13 @@ body {
 }
 
 #theme-toggle-button {
+    background-color: lightcyan !important;
+    padding: 0;
+    font-size: xx-large;
     width: 130px;
     height: 40px;
-    font-size: xx-large;
 }
+
 /* ~~> fin button */
 .bi-person-circle,
 .nav-pills {
@@ -198,6 +201,13 @@ body {
 body.dark-theme {
     background-color: #192229 !important;
     background-image: url("#");
+}
+.dark-theme #theme-toggle-button {
+    background-color: #212e36 !important;
+    padding: 0;
+    font-size: xx-large;
+    width: 130px;
+    height: 40px;
 }
 .dark-theme .txtTittle {
     border-color: rgb(47, 94, 47);
