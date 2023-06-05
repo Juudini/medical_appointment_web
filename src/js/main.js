@@ -7,8 +7,8 @@ btnLogin.addEventListener("click", login);
 
 function login(e) {
     e.preventDefault();
-    const user = document.getElementById("user").value;
-    const passw = document.getElementById("password").value;
+    let user = document.getElementById("user").value;
+    let passw = document.getElementById("password").value;
     // Verifica las credenciales del usuario
     if (user === USER.user && passw === USER.password) {
         localStorage.setItem("UserLog", JSON.stringify("1"));
