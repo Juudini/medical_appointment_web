@@ -9,7 +9,18 @@ body {
     background-color: #716add;
     color: white;
 }
+/* Button modeTheme */
+.dropdown-item label {
+    align-items: center;
+    padding: 0;
+}
 
+#theme-toggle-button {
+    width: 130px;
+    height: 40px;
+    font-size: xx-large;
+}
+/* ~~> fin button */
 .bi-person-circle,
 .nav-pills {
     position: -webkit-sticky !important;
