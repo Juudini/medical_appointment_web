@@ -1,4 +1,15 @@
 //page~~>GESTIONAR TURNOS<~~  MOSTRAR DATOS en tabla.
+"use strict";
+
+//Modules
+import { checkUser } from "./modules/checkUser.js";
+import { upToLocalStoragePacientes } from "./modules/requestAPI.js";
+import { themeMode } from "./modules/themeToggleButton.js";
+
+//Check user log
+checkUser();
+//ThemeMode
+themeMode();
 
 const tablaDatos = document.getElementById("tablaDatos");
 
@@ -120,7 +131,7 @@ const llenarTabla = document.getElementById("llenarTabla");
 llenarTabla.addEventListener("click", uploadPacientes);
 
 function uploadPacientes() {
-    mostrarAlert = mostrarLoading(); // Mostrar el loading y almacenar
+    let mostrarAlert = mostrarLoading(); // Mostrar el loading y almacenar
     upToLocalStoragePacientes().then(() => {
         console.log("🐢🐢¡¡Carga exitosa en tabla!!🐢🐢");
         location.reload();

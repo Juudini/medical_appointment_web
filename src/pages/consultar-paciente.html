@@ -44,7 +44,7 @@
             rel="stylesheet" />
     </head>
     <body>
-        <main class="container-fluid row">
+        <div class="container-fluid row">
             <nav class="col-sm-auto bg-light sticky-top">
                 <div
                     class="d-flex flex-sm-column flex-row flex-nowrap bg-light align-items-center sticky-top">
@@ -101,7 +101,9 @@
                                 </label>
                             </li>
                             <li>
-                                <a class="dropdown-item" href="./../index.html"
+                                <a
+                                    class="dropdown-item"
+                                    href="./../../index.html"
                                     >Salir</a
                                 >
                             </li>
@@ -110,7 +112,7 @@
                 </div>
             </nav>
 
-            <section class="col-sm p-3 min-vh-100">
+            <main class="col-sm p-3 min-vh-100">
                 <!-- Search  -->
                 <div class="search1">
                     <div class="input-group mb-3 container">
@@ -159,12 +161,10 @@
                         </table>
                     </div>
                 </div>
-            </section>
-        </main>
+            </main>
+        </div>
 
         <!-- SCRIPTS -->
-        <script src="./../scripts/checkUser.js"></script>
-        <script src="./../scripts/themeToggleButton.js"></script>
-        <script src="./../scripts/consultaPaciente.js"></script>
+        <script type="module" src="./../js/consultaPaciente.js"></script>
     </body>
 </html>

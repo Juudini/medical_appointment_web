@@ -36,7 +36,6 @@
         <link href="./../styles/navbar.css" rel="stylesheet" />
         <link href="./../styles/gestionar-turnos.css" rel="stylesheet" />
         <link href="./../styles/spinner.css" rel="stylesheet" />
-
         <!-- FONT-FAMILY  -->
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -45,11 +44,9 @@
             rel="stylesheet" />
         <!-- Sweet Alert -->
         <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-        <!-- API Pacientes -->
-        <script src="./../scripts/requestAPI.js"></script>
     </head>
     <body>
-        <main class="container-fluid row">
+        <div class="container-fluid row">
             <nav class="col-sm-auto bg-light sticky-top">
                 <div
                     class="d-flex flex-sm-column flex-row flex-nowrap bg-light align-items-center sticky-top">
@@ -106,7 +103,9 @@
                                 </label>
                             </li>
                             <li>
-                                <a class="dropdown-item" href="./../index.html"
+                                <a
+                                    class="dropdown-item"
+                                    href="./../../index.html"
                                     >Salir</a
                                 >
                             </li>
@@ -115,7 +114,7 @@
                 </div>
             </nav>
 
-            <section class="col-sm p-3 min-vh-100">
+            <main class="col-sm p-3 min-vh-100">
                 <!-- TABLE TURNOS PROGRAMADOS -->
                 <div crole="row" class="container">
                     <div class="tittle container responsive">
@@ -162,12 +161,10 @@
                         </table>
                     </div>
                 </div>
-            </section>
-        </main>
+            </main>
+        </div>
 
         <!-- SCRIPTS -->
-        <script src="./../scripts/checkUser.js"></script>
-        <script src="./../scripts/themeToggleButton.js"></script>
-        <script src="./../scripts/gestionTurnos.js"></script>
+        <script type="module" src="./../js/gestionTurnos.js"></script>
     </body>
 </html>

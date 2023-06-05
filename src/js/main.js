@@ -1,4 +1,5 @@
 // page~~>LOGIN<~~ Esto pertenece a la Page INDEX.html
+"use strict";
 
 const USER = { user: "admin", password: "admin" };
 const btnLogin = document.getElementById("btnLogin");

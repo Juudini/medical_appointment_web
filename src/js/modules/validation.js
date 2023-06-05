@@ -1,9 +1,12 @@
 // page ~~>AGREGAR TURNOS<~~ form's validations
-//>INICIO DE FUNCIONES DE VALIDACIÓN<
+"use strict";
+//Modules
+import { datosPaciente } from "./../agregarTurnos.js";
 
+//>INICIO DE FUNCIONES DE VALIDACIÓN<
 //>DNI<
-const pedirDNI = () => {
-    const dniIngresado = document.getElementById("inputDNI").value;
+export const pedirDNI = () => {
+    let dniIngresado = document.getElementById("inputDNI").value;
     // Almacena el valor a la propiedad "dni" en datosPaciente{}
     datosPaciente.dni = dniIngresado;
     if (
@@ -21,8 +24,8 @@ const pedirDNI = () => {
 // --->fin DNI<---
 
 //>Apellido<
-const pedirApellido = () => {
-    apellidoIngresado = document.getElementById("inputApellido").value;
+export const pedirApellido = () => {
+    let apellidoIngresado = document.getElementById("inputApellido").value;
     // Almacena el valor a la propiedad "apellido" en datosPaciente{}.
     datosPaciente.apellido = apellidoIngresado;
     if (
@@ -42,8 +45,8 @@ const pedirApellido = () => {
 // --->fin Apellido<---
 
 //>Nombre<
-const pedirNombre = () => {
-    nombreIngresado = document.getElementById("inputNombre").value;
+export const pedirNombre = () => {
+    let nombreIngresado = document.getElementById("inputNombre").value;
     // Almacena el valor a la propiedad "nombre" en datosPaciente{}.
     datosPaciente.nombre = nombreIngresado;
     if (
@@ -63,8 +66,8 @@ const pedirNombre = () => {
 // --->fin Nombre<---
 
 //>E-mail<
-const pedirEmail = () => {
-    emailIngresado = document.getElementById("inputEmail").value;
+export const pedirEmail = () => {
+    let emailIngresado = document.getElementById("inputEmail").value;
     // Almacena el valor a la propiedad "email" en datosPaciente{}.
     datosPaciente.email = emailIngresado;
     if (
@@ -84,8 +87,8 @@ const pedirEmail = () => {
 // --->fin E-mail<---
 
 //>Teléfono<
-const pedirTelefono = () => {
-    telefonoIngresado = document.getElementById("inputTelefono").value;
+export const pedirTelefono = () => {
+    let telefonoIngresado = document.getElementById("inputTelefono").value;
     // Almacena el valor a la propiedad "telefono" en datosPaciente{}
     datosPaciente.telefono = telefonoIngresado;
     if (
@@ -105,13 +108,15 @@ const pedirTelefono = () => {
 // --->fin Teléfono<---
 
 // Eventos >INPUTS< Formularios.
-inputDNI.addEventListener("blur", pedirDNI);
-inputApellido.addEventListener("blur", pedirApellido);
-inputNombre.addEventListener("blur", pedirNombre);
-inputEmail.addEventListener("blur", pedirEmail);
-inputTelefono.addEventListener("blur", pedirTelefono);
+export const eventsInputsForm = () => {
+    inputDNI.addEventListener("blur", pedirDNI);
+    inputApellido.addEventListener("blur", pedirApellido);
+    inputNombre.addEventListener("blur", pedirNombre);
+    inputEmail.addEventListener("blur", pedirEmail);
+    inputTelefono.addEventListener("blur", pedirTelefono);
+};
 
-const validarFormulario = () => {
+export const validarFormulario = () => {
     // Validación de los campos individualmente
     const isDNIValido = pedirDNI();
     const isApellidoValido = pedirApellido();
@@ -139,7 +144,7 @@ const validarFormulario = () => {
 };
 
 // >SELECTS<
-const validarSelect = () => {
+export const validarSelect = () => {
     const selects = document.querySelectorAll("#form2 select");
     let areSelected = true;
     selects.forEach((select) => {

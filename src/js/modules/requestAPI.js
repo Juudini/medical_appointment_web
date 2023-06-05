@@ -1,4 +1,5 @@
 //page~~>Gestionar Turnos<~~ API
+"use strict";
 
 const getData = async () => {
     try {
@@ -11,7 +12,7 @@ const getData = async () => {
     }
 };
 
-const upToLocalStoragePacientes = async () => {
+export const upToLocalStoragePacientes = async () => {
     try {
         const data = await getData();
         const isPacientes = JSON.parse(localStorage.getItem("Pacientes")) || [];

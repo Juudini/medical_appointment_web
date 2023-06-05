@@ -1,28 +1,31 @@
 //page~~>AGREGAR TURNOS<~~ Lógica de formularios
-class Paciente {
-    constructor(dni, apellido, nombre, email, telefono) {
-        this.dni = dni;
-        this.apellido = apellido;
-        this.nombre = nombre;
-        this.email = email;
-        this.telefono = telefono;
-    }
-}
-class Eleccion {
-    constructor(area, dia, hora, obra) {
-        this.area = area;
-        this.dia = dia;
-        this.hora = hora;
-        this.obra = obra;
-    }
-}
+"use strict";
 
-// ~~~~> iniciamos FORMULARIOS
+//Modules
+import { Paciente, Eleccion } from "./modules/utils.js";
+import {
+    validarFormulario,
+    validarSelect,
+    pedirDNI,
+    pedirApellido,
+    pedirEmail,
+    pedirNombre,
+    pedirTelefono,
+    eventsInputsForm,
+} from "./modules/validation.js";
+import { checkUser } from "./modules/checkUser.js";
+import { themeMode } from "./modules/themeToggleButton.js";
+
+//Check user log
+checkUser();
+//ThemeMode
+themeMode();
+
 // Esto sería: ARRAY_PACIENTES [];
 let ARRAY_PACIENTES = JSON.parse(localStorage.getItem("Pacientes")) || [];
 
 // Definimos en alcance global
-let datosPaciente = {};
+export let datosPaciente = {};
 let datosEleccion = {};
 
 // ~~~~>Form1
@@ -37,11 +40,15 @@ form.addEventListener("submit", (e) => {
     mostrarForm();
     botonesGuias();
 });
+
+//Eventos inputs form
+eventsInputsForm();
+
 const obtenerDatos = () => {
     pedirDNI();
-    pedirApellido().toUpperCase();
-    pedirNombre().toUpperCase();
-    pedirEmail().toLowerCase();
+    pedirApellido();
+    pedirNombre();
+    pedirEmail();
     pedirTelefono();
 };
 

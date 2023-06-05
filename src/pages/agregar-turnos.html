@@ -45,7 +45,7 @@
         <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     </head>
     <body>
-        <main class="container-fluid row">
+        <div class="container-fluid row">
             <nav class="col-sm-auto bg-light content sticky-top">
                 <div
                     class="d-flex flex-sm-column flex-row flex-nowrap bg-light align-items-center sticky-top">
@@ -83,7 +83,8 @@
                         <a
                             href="#"
                             class="d-flex align-items-center justify-content-center p-3 link-dark text-decoration-none dropdown-toggle"
-                            id="dropdownUser3" aria-label="icono people"
+                            id="dropdownUser3"
+                            aria-label="icono people"
                             data-bs-toggle="dropdown"
                             aria-expanded="false">
                             <i class="bi-person-circle h2"></i>
@@ -98,10 +99,12 @@
                                         class="btn btn-light">
                                         Cambiar Tema
                                     </button>
-                                </lab>
+                                </label>
                             </li>
                             <li>
-                                <a class="dropdown-item" href="./../index.html"
+                                <a
+                                    class="dropdown-item"
+                                    href="./../../index.html"
                                     >Salir</a
                                 >
                             </li>
@@ -110,7 +113,7 @@
                 </div>
             </nav>
 
-            <section class="col-sm p-3 min-vh-100">
+            <main class="col-sm p-3 min-vh-100">
                 <!-- BOTONES TABS form -->
                 <div id="btnContainer" class="btnTabContainer">
                     <button id="btn-form1" class="btnTab" data-target="form1">
@@ -228,14 +231,11 @@
                         </div>
                     </fieldset>
                 </form>
-            </section>
-        </main>
+            </main>
+        </div>
 
         <!-- SCRIPTS -->
-        <script src="./../scripts/checkUser.js"></script>
-        <script src="./../scripts/themeToggleButton.js"></script>
-        <script src="./../scripts/validation.js"></script>
-        <script src="./../scripts/agregarTurnos.js"></script>
-        <script src="./../scripts/actionsFormTurnos.js"></script>
+        <script type="module" src="./../js/agregarTurnos.js"></script>
+        <script type="module" src="./../js/actionsFormTurnos.js"></script>
     </body>
 </html>

@@ -1,4 +1,14 @@
 //page~~>CONSULTAR TURNOS<~~ serch y pintar tabla búsqueda.
+"use strict";
+
+//Modules
+import { checkUser } from "./modules/checkUser.js";
+import { themeMode } from "./modules/themeToggleButton.js";
+
+//Check user log
+checkUser();
+//ThemeMode
+themeMode();
 
 const datosPaciente = JSON.parse(localStorage.getItem("Pacientes")) || [];
 const searchPorLetra = document.getElementById("searchPorLetra");

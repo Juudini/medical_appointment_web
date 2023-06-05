@@ -40,7 +40,7 @@
             rel="stylesheet"
             href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css" />
         <!-- CSS -->
-        <link href="./styles/main-styles.css" rel="stylesheet" />
+        <link href="./src/styles/main-styles.css" rel="stylesheet" />
         <!-- FONT-FAMILY  -->
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -48,7 +48,7 @@
             href="https://fonts.googleapis.com/css2?family=Alkatra&display=swap"
             rel="stylesheet" />
         <!-- Background Granim -->
-        <script src="./scripts/granim.min.js"></script>
+        <script src="./src/js/granim.min.js"></script>
     </head>
     <body>
         <!-- LOGIN -->
@@ -56,7 +56,7 @@
 
         <div id="login-form" class="wrapper">
             <div class="logo">
-                <img src="./images/gatito.webp" alt="user-foto" />
+                <img src="./src/images/gatito.webp" alt="user-foto" />
             </div>
             <div class="text-center mt-4 name">Admin</div>
             <form class="p-3 mt-3">
@@ -84,59 +84,67 @@
             </div> -->
         </div>
         <!-- Main -->
-        <main id="main-content" style="display: none">
+        <div id="main-content" style="display: none">
             <!--Pre-Header-->
-            <div class="preHeader">
+            <header class="preHeader">
                 <a class="navbar-brand txtTittle" href="#"
                     >| CLÍNICA ONLINE |</a
                 >
                 <div class="buttons">
                     <a href="./index.html" class="btn">Salir</a>
                 </div>
-            </div>
-            <section class="services-section">
-                <h2>Servicios:</h2>
-                <ul class="services-list" type="button">
-                    <a class="service-2" href="./pages/agregar-turnos.html">
-                        Agregar Turno
-                    </a>
-                    <a href="./pages/consultar-paciente.html" class="service-1">
-                        Consultar Pacientes
-                    </a>
-                    <a
-                        class="service-4"
-                        href="./pages/consultar-paciente.html"
-                        type="button">
-                        Gestionar Turno
-                    </a>
-                </ul>
-            </section>
-            <!-- Footer -->
-            <footer class="footer">
-                <div class="container">
-                    <div class="row justify-content-center align-items-center">
-                        <div class="col-md-12 text-center">
-                            <h3 class="typewriter">CLÍNICA ONLINE</h3>
-                            <p class="tittleP">
-                                Atención médica en línea accesible y de calidad.
-                            </p>
-                        </div>
-                        <div class="col-md-4 text-center">
-                            <a href="https://github.com/Juudini">
-                                <i class="bi bi-github fs-3"></i>
-                            </a>
-                        </div>
-                        <div class="col-md-12 text-center">
-                            <p>
-                                © 2023 Clínica Online. Todos los derechos
-                                reservados.
-                            </p>
-                        </div>
+            </header>
+            <main>
+                <section class="services-section">
+                    <h2>Servicios:</h2>
+                    <ul class="services-list" type="button">
+                        <a
+                            class="service-2"
+                            href="./src/pages/agregar-turnos.html">
+                            Agregar Turno
+                        </a>
+                        <a
+                            href="./src/pages/consultar-paciente.html"
+                            class="service-1">
+                            Consultar Pacientes
+                        </a>
+                        <a
+                            class="service-4"
+                            href="./src/pages/consultar-paciente.html"
+                            type="button">
+                            Gestionar Turno
+                        </a>
+                    </ul>
+                </section>
+                <!-- Footer -->
+                <footer class="footer">
+                    <div class="container">
+                        <section
+                            class="row justify-content-center align-items-center">
+                            <div class="col-md-12 text-center">
+                                <h3 class="typewriter">CLÍNICA ONLINE</h3>
+                                <p class="tittleP">
+                                    Atención médica en línea accesible y de
+                                    calidad.
+                                </p>
+                            </div>
+                            <div class="col-md-4 text-center">
+                                <a href="https://github.com/Juudini">
+                                    <i class="bi bi-github fs-3"></i>
+                                </a>
+                            </div>
+                            <div class="col-md-12 text-center">
+                                <p>
+                                    © 2023 Clínica Online. Todos los derechos
+                                    reservados.
+                                </p>
+                            </div>
+                        </section>
                     </div>
-                </div>
-            </footer>
-        </main>
+                </footer>
+            </main>
+        </div>
 
-        <script src="./scripts/main.js"></script>
+        <script src="./src/js/main.js"></script>
     </body>
 </html>
