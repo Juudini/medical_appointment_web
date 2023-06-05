@@ -37,6 +37,7 @@ body {
     .sticky-top {
         flex-wrap: wrap;
         justify-content: center;
+        margin-right: -2.5rem; /* Solución ancho navbar  */
     }
 
     .txtTittle {
@@ -202,6 +203,10 @@ body {
 body.dark-theme {
     background-color: #192229 !important;
     background-image: url("#");
+}
+.dark-theme ::selection {
+    background-color: green;
+    color: white;
 }
 .dark-theme #theme-toggle-button {
     background-color: #212e36 !important;
