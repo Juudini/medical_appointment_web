@@ -245,3 +245,6 @@ body.dark-theme {
     background-color: #eff3f5 !important;
     color: black;
 }
+.dark-theme .bi-person-fill-gear {
+    color: #eff3f5;
+}
