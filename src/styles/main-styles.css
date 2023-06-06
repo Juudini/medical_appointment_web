@@ -22,7 +22,7 @@ body {
     margin-bottom: 12px;
     align-items: center;
     display: flex;
-    justify-content: space-between; /* Alinear los botones a la derecha */
+    justify-content: center; /* Alinear los botones a la derecha */
 }
 
 .preHeader a {
