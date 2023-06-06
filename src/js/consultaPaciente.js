@@ -4,12 +4,14 @@
 //Modules
 import { checkUser } from "./modules/checkUser.js";
 import { themeMode } from "./modules/themeToggleButton.js";
+import { exitBtnEvent } from "./modules/checkUser.js";
 
 //Check user log
 checkUser();
 //ThemeMode
 themeMode();
-
+//Button Exit
+exitBtnEvent();
 const datosPaciente = JSON.parse(localStorage.getItem("Pacientes")) || [];
 const searchPorLetra = document.getElementById("searchPorLetra");
 

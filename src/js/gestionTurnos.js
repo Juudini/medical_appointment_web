@@ -5,12 +5,14 @@
 import { checkUser } from "./modules/checkUser.js";
 import { upToLocalStoragePatients } from "./modules/requestAPI.js";
 import { themeMode } from "./modules/themeToggleButton.js";
+import { exitBtnEvent } from "./modules/checkUser.js";
 
 //Check user log
 checkUser();
 //ThemeMode
 themeMode();
-
+//Button Exit
+exitBtnEvent();
 const tablaDatos = document.getElementById("tablaDatos");
 
 const verDatos = () => {

@@ -15,11 +15,14 @@ import {
 } from "./modules/validation.js";
 import { checkUser } from "./modules/checkUser.js";
 import { themeMode } from "./modules/themeToggleButton.js";
+import { exitBtnEvent } from "./modules/checkUser.js";
 
 //Check user log
 checkUser();
 //ThemeMode
 themeMode();
+//Button Exit
+exitBtnEvent();
 
 // Esto sería: ARRAY_PACIENTES [];
 let ARRAY_PACIENTES = JSON.parse(localStorage.getItem("Pacientes")) || [];
