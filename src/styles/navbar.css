@@ -248,6 +248,9 @@ a[href="https://github.com/Juudini"]:hover
 {
     color: gray;
 }
+#exit-button {
+    text-align: center;
+}
 
 .dark-theme .sticky-top {
     background-color: #212e36 !important;
@@ -278,6 +281,7 @@ a[href="https://github.com/Juudini"]:hover
     background-color: black !important;
     color: white;
 }
+/* DarkMode */
 .dark-theme .dropdown button:hover {
     background-color: #eff3f5 !important;
     color: black;
@@ -292,4 +296,14 @@ a[href="https://github.com/Juudini"]:hover
 .dark-theme a[href="https://github.com/Juudini"]:hover
 {
     color: black;
+}
+/* Button Exit */
+.dark-theme #exit-button {
+    text-align: center;
+    color: #eff3f5;
+}
+.dark-theme #exit-button:hover {
+    text-align: center;
+    color: #eff3f5;
+    background-color: #192229 !important;
 }
