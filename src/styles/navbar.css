@@ -233,6 +233,22 @@ body.dark-theme {
             0px 0px 3px green;
     }
 }
+
+a[href="https://github.com/Juudini"]
+{
+    color: black;
+    display: block;
+    text-align: center;
+    font-size: 25px;
+    margin-left: auto;
+    margin-right: auto;
+    transition: color 0.3s ease;
+}
+a[href="https://github.com/Juudini"]:hover
+{
+    color: gray;
+}
+
 .dark-theme .sticky-top {
     background-color: #212e36 !important;
     border-color: #2a3b47 !important;
@@ -268,4 +284,12 @@ body.dark-theme {
 }
 .dark-theme .bi-person-fill-gear {
     color: #eff3f5;
+}
+.dark-theme a[href="https://github.com/Juudini"]
+{
+    color: white;
+}
+.dark-theme a[href="https://github.com/Juudini"]:hover
+{
+    color: black;
 }
