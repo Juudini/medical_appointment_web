@@ -9,14 +9,49 @@ function login(e) {
     e.preventDefault();
     let user = document.getElementById("user").value;
     let passw = document.getElementById("password").value;
+
     // Verifica las credenciales del usuario
     if (user === USER.user && passw === USER.password) {
         localStorage.setItem("UserLog", JSON.stringify("1"));
-        document.getElementById("login-form").style.display = "none";
-        document.getElementById("main-content").style.display = "block";
+
+        //Disabled button
+        btnLogin.setAttribute("disabled", "true");
+
+        //Alert
+        const Toast = Swal.mixin({
+            toast: true,
+            position: "top-end",
+            showConfirmButton: false,
+            timer: 2000,
+            timerProgressBar: true,
+        });
+        Toast.fire({
+            icon: "success",
+            title: "Signed in successfully",
+        }).then(() => {
+            //Actions show page
+            document.getElementById("login-form").style.display = "none";
+            document.getElementById("main-content").style.display = "block";
+        });
     } else {
         password.classList.add("input-error");
-        console.log("Lo siento, las credenciales no son válidas");
+
+        //Alert
+        const Toast = Swal.mixin({
+            toast: true,
+            position: "top",
+            iconColor: "white",
+            customClass: {
+                popup: "colored-toast",
+            },
+            showConfirmButton: false,
+            timer: 1500,
+            timerProgressBar: true,
+        });
+        Toast.fire({
+            icon: "error",
+            title: `Las credenciales no son válidas`,
+        });
     }
 }
 

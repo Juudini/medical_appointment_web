@@ -217,16 +217,9 @@ body {
     background-color: #f8f8f8;
 }
 
-.footer h5 {
-    font-size: 1.2rem;
-    margin-bottom: 1rem;
-    color: black;
-    text-align: center;
-    transition: color 0.3s ease;
-}
-
-.footer:hover h5 {
+.footer:hover h3 {
     color: #4078c0;
+    transition: color 0.3s ease;
 }
 
 .footer p {
@@ -265,13 +258,37 @@ body {
     transform: scaleX(1);
 }
 
-.footer a[href="https://www.linkedin.com/in/juandebandi/"]
+/* Icon GitHub */
+a[href="https://github.com/Juudini"]
 {
+    color: black;
+    display: inline-block;
+    text-align: center;
     font-size: 25px;
-    margin-left: 5px;
+    margin-left: auto;
+    margin-right: 5px;
     transition: color 0.3s ease;
 }
+a[href="https://github.com/Juudini"]:hover
+{
+    color: gray;
+}
 
+/* LinkedIn */
+a[href="https://www.linkedin.com/in/juandebandi/"]
+{
+    color: black;
+    display: inline-block;
+    text-align: center;
+    font-size: 25px;
+    margin-left: 5px;
+    margin-right: auto;
+    transition: color 0.3s ease;
+}
+a[href="https://www.linkedin.com/in/juandebandi/"]:hover
+{
+    color: gray;
+}
 /* -->ANIMACIÓNES */
 
 /* LOGIN */
@@ -390,4 +407,7 @@ body {
 .input-error {
     border-radius: red !important;
     color: red !important;
+}
+.colored-toast.swal2-icon-error {
+    background-color: #f27474 !important;
 }
