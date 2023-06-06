@@ -1,26 +1,26 @@
 /* --->FORMULARIO TURNOS */
 
 form {
-    max-width: 600px; /* Ancho máximo del formulario */
-    margin: 0 auto; /* Centrado horizontal del formulario */
-    padding: 40px; /* Espaciado interno del formulario */
-    border-radius: 10px; /* Bordes redondeados del formulario */
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); /* Sombra del formulario */
-    background-color: rgb(234, 241, 241); /* Fondo del formulario */
-    color: black; /* Color del texto del formulario */
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    background-color: rgb(234, 241, 241);
+    color: black;
 }
 /* Títulos/etiquetas del formulario */
 label {
-    display: block; /* Cada etiqueta en su propia línea */
-    margin-bottom: 10px; /* Espaciado entre etiquetas */
-    font-size: 18px; /* Tamaño de fuente de las etiquetas */
-    font-weight: bold; /* Texto en negrita */
+    display: block;
+    margin-bottom: 10px;
+    font-size: 18px;
+    font-weight: bold;
 }
 select {
-    display: block; /* Cada etiqueta en su propia línea */
-    margin-bottom: 10px; /* Espaciado entre etiquetas */
-    font-size: 18px; /* Tamaño de fuente de las etiquetas */
-    font-weight: bold; /* Texto en negrita */
+    display: block;
+    margin-bottom: 10px;
+    font-size: 18px;
+    font-weight: bold;
     color: black;
 }
 
@@ -35,15 +35,15 @@ select[id="area"],
 select[id="dia"],
 select[id="hora"],
 select[id="obra"] {
-    display: block; /* Cada campo en su propia línea */
-    width: 100%; /* Ancho del campo al 100% */
-    padding: 15px; /* Espaciado interno del campo */
-    margin-bottom: 20px; /* Espaciado inferior del campo */
-    border: none; /* Sin borde */
-    border-radius: 10px; /* Bordes redondeados del campo */
-    background-color: rgb(248, 248, 248); /* Fondo semitransparente del campo */
-    color: black; /* Color del texto del campo */
-    font-size: 18px; /* Tamaño de fuente de los campos */
+    display: block;
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 10px;
+    background-color: rgb(248, 248, 248);
+    color: black;
+    font-size: 18px;
 }
 option[class="disabled"] {
     color: #aaa !important;
@@ -171,7 +171,26 @@ form.fade-in {
         color: #333;
     }
 }
+@media (max-width: 915px) {
+    #btn-form1 {
+        display: inline-block;
+    }
 
+    #btn-form2 {
+        display: inline-block;
+    }
+
+    #btn-form3 {
+        top: 0.5rem;
+        display: inline-block;
+    }
+}
+@media (max-width: 454px) {
+    #btn-form3 {
+        top: 0rem;
+        display: inline-block;
+    }
+}
 /*-------> DARK THEME */
 
 /* FORMS */
