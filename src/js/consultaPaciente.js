@@ -13,7 +13,7 @@ themeMode();
 const datosPaciente = JSON.parse(localStorage.getItem("Pacientes")) || [];
 const searchPorLetra = document.getElementById("searchPorLetra");
 
-let recuperados = [];
+let arrayDataPatient = [];
 
 let pacientePrimerDato = {};
 
@@ -36,26 +36,26 @@ datosPaciente.forEach((paciente) => {
         const dia = segundoDato.dia;
         const hora = segundoDato.hora;
 
-        const pacienteCompleto = {
+        const patientAllData = {
             ...pacientePrimerDato,
             obra,
             area,
             dia,
             hora,
         };
-        recuperados.push(pacienteCompleto);
+        arrayDataPatient.push(patientAllData);
     }
 });
 
 searchPorLetra.addEventListener("input", (event) => {
-    const valorBusqueda = event.target.value.toLowerCase();
+    const searchValue = event.target.value.toLowerCase();
 
-    if (valorBusqueda.trim() !== "") {
-        const resultados = recuperados.filter((paciente) =>
+    if (searchValue.trim() !== "") {
+        const resultados = arrayDataPatient.filter((paciente) =>
             Object.values(paciente).some(
                 (value) =>
                     typeof value === "string" &&
-                    value.toLowerCase().includes(valorBusqueda)
+                    value.toLowerCase().includes(searchValue)
             )
         );
         // Obtener el elemento de la tabla existente o crear uno nuevo
@@ -70,9 +70,9 @@ searchPorLetra.addEventListener("input", (event) => {
         }
 
         // Crear las filas de la tabla con datos de resultados
-        resultados.forEach((paciente) => {
+        resultados.forEach((patient) => {
             const fila = document.createElement("tr");
-            Object.values(paciente).forEach((value) => {
+            Object.values(patient).forEach((value) => {
                 const td = document.createElement("td");
                 td.textContent = value;
                 fila.appendChild(td);

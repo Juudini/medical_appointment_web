@@ -116,7 +116,7 @@ export const eventsInputsForm = () => {
     inputTelefono.addEventListener("blur", pedirTelefono);
 };
 
-export const validarFormulario = () => {
+export const validateForm = () => {
     // Validación de los campos individualmente
     const isDNIValido = pedirDNI();
     const isApellidoValido = pedirApellido();
@@ -144,7 +144,7 @@ export const validarFormulario = () => {
 };
 
 // >SELECTS<
-export const validarSelect = () => {
+export const validateSelect = () => {
     const selects = document.querySelectorAll("#form2 select");
     let areSelected = true;
     selects.forEach((select) => {

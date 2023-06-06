@@ -4,8 +4,8 @@
 //Modules
 import { Paciente, Eleccion } from "./modules/utils.js";
 import {
-    validarFormulario,
-    validarSelect,
+    validateForm,
+    validateSelect,
     pedirDNI,
     pedirApellido,
     pedirEmail,
@@ -33,18 +33,18 @@ const form = document.getElementById("form1");
 
 form.addEventListener("submit", (e) => {
     e.preventDefault();
-    if (!validarFormulario()) {
+    if (!validateForm()) {
         return;
     }
-    obtenerDatos();
-    mostrarForm();
-    botonesGuias();
+    getDataInputs();
+    showForm();
+    buttonsGuides();
 });
 
 //Eventos inputs form
 eventsInputsForm();
 
-const obtenerDatos = () => {
+const getDataInputs = () => {
     pedirDNI();
     pedirApellido();
     pedirNombre();
@@ -52,13 +52,13 @@ const obtenerDatos = () => {
     pedirTelefono();
 };
 
-const mostrarForm = () => {
+const showForm = () => {
     form.style.display = "none";
     form2.style.display = "block";
 };
-const botonesGuias = () => {
-    const habilitarTabs = document.getElementById("btn-form1");
-    habilitarTabs.classList.add("active");
+const buttonsGuides = () => {
+    const enableTabs = document.getElementById("btn-form1");
+    enableTabs.classList.add("active");
 };
 // --> fin FORM1
 
@@ -67,16 +67,16 @@ const form2 = document.getElementById("form2");
 
 form2.addEventListener("submit", (e) => {
     e.preventDefault();
-    if (!validarSelect()) {
+    if (!validateSelect()) {
         return;
     }
-    obtenerDatosEleccion();
-    crearObjetoPaciente();
-    mostrarForm2();
-    botonesGuias2();
+    getSelectedData();
+    createPatientObject();
+    showForm2();
+    buttonsGuides2();
 });
 
-const obtenerDatosEleccion = () => {
+const getSelectedData = () => {
     const selects = document.querySelectorAll("#form2 select");
     selects.forEach((s) =>
         ["area", "dia", "hora", "obra"].includes(s.id)
@@ -85,30 +85,30 @@ const obtenerDatosEleccion = () => {
     );
 };
 
-const crearObjetoPaciente = () => {
-    const suEleccion = new Eleccion(
+const createPatientObject = () => {
+    const yourSelected = new Eleccion(
         datosEleccion.area,
         datosEleccion.dia,
         datosEleccion.hora,
         datosEleccion.obra
     );
-    const nuevoPaciente = new Paciente(
+    const newPatient = new Paciente(
         datosPaciente.dni,
         datosPaciente.apellido,
         datosPaciente.nombre,
         datosPaciente.email,
         datosPaciente.telefono
     );
-    const pacienteAndSeleccion = [nuevoPaciente, suEleccion];
-    ARRAY_PACIENTES.push(pacienteAndSeleccion);
+    const patientAndSelected = [newPatient, yourSelected];
+    ARRAY_PACIENTES.push(patientAndSelected);
 };
-const mostrarForm2 = () => {
+const showForm2 = () => {
     form2.style.display = "none";
     form3.style.display = "block";
 };
-const botonesGuias2 = () => {
-    const habilitarTabs2 = document.getElementById("btn-form2");
-    habilitarTabs2.classList.add("active");
+const buttonsGuides2 = () => {
+    const enableTabs2 = document.getElementById("btn-form2");
+    enableTabs2.classList.add("active");
 };
 // --> fin FORM2
 
@@ -118,9 +118,9 @@ const form3 = document.getElementById("form3");
 const isSubmit = (e) => {
     e.preventDefault();
     upToLocalStorage();
-    msjExitoToPage();
-    mostrarForm3();
-    botonesGuias3();
+    msgSuccessToPage();
+    showForm3();
+    buttonsGuides3();
     form3.removeEventListener("submit", isSubmit);
 };
 form3.addEventListener("submit", isSubmit);
@@ -128,7 +128,7 @@ form3.addEventListener("submit", isSubmit);
 const upToLocalStorage = () => {
     localStorage.setItem("Pacientes", JSON.stringify(ARRAY_PACIENTES));
 };
-const msjExitoToPage = async () => {
+const msgSuccessToPage = async () => {
     const Toast = Swal.mixin({
         toast: true,
         position: "top-right",
@@ -145,13 +145,13 @@ const msjExitoToPage = async () => {
         title: "¡Agregado con Éxito!",
     });
 };
-const mostrarForm3 = () => {
+const showForm3 = () => {
     form2.style.display = "none";
     form3.style.display = "block";
 };
-const botonesGuias3 = () => {
-    const habilitarTabs3 = document.getElementById("btn-form3");
-    habilitarTabs3.classList.add("active");
+const buttonsGuides3 = () => {
+    const enableTabs3 = document.getElementById("btn-form3");
+    enableTabs3.classList.add("active");
 };
 // --> fin FORM3
 
