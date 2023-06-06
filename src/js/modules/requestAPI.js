@@ -3,19 +3,22 @@
 
 const getData = async () => {
     try {
-        let res = await fetch("https://apimocha.com/paciente/data");
-        let data = await res.json();
-        console.log("Response:", res.ok);
+        const res = await fetch("https://apimocha.com/paciente/data");
+        if (!res.ok) {
+            throw new Error("Error HTTP: " + res.status);
+        }
+        const data = await res.json();
         return data;
     } catch (error) {
-        console.error("alamadree:", error);
+        console.error("Error en la solicitud:", error);
+        throw error;
     }
 };
 
-export const upToLocalStoragePacientes = async () => {
+export const upToLocalStoragePatients = async () => {
     try {
         const data = await getData();
-        const isPacientes = JSON.parse(localStorage.getItem("Pacientes")) || [];
+        let isPacientes = JSON.parse(localStorage.getItem("Pacientes")) || [];
         localStorage.setItem(
             "Pacientes",
             JSON.stringify([...data, ...isPacientes])
@@ -23,5 +26,6 @@ export const upToLocalStoragePacientes = async () => {
         console.log("LocalStorage loaded 🐇🐇¡¡Successfully!!🐇🐇 ");
     } catch (error) {
         console.error("Error al obtener los datos", error);
+        throw error;
     }
 };

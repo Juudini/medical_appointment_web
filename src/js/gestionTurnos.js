@@ -3,7 +3,7 @@
 
 //Modules
 import { checkUser } from "./modules/checkUser.js";
-import { upToLocalStoragePacientes } from "./modules/requestAPI.js";
+import { upToLocalStoragePatients } from "./modules/requestAPI.js";
 import { themeMode } from "./modules/themeToggleButton.js";
 
 //Check user log
@@ -131,14 +131,14 @@ const llenarTabla = document.getElementById("llenarTabla");
 llenarTabla.addEventListener("click", uploadPacientes);
 
 function uploadPacientes() {
-    let mostrarAlert = mostrarLoading(); // Mostrar el loading y almacenar
-    upToLocalStoragePacientes().then(() => {
-        console.log("🐢🐢¡¡Carga exitosa en tabla!!🐢🐢");
+    let showAlert = showLoading(); // Mostrar el loading y almacenar
+    upToLocalStoragePatients().then(() => {
+        console.log("🐢🐢¡¡Successful upload to table!!🐢🐢");
         location.reload();
-        Swal.close(mostrarAlert);
+        Swal.close(showAlert);
     });
 }
-function mostrarLoading() {
+function showLoading() {
     return Swal.fire({
         html:
             '<div class="sk-folding-cube">' +
