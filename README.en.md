@@ -56,7 +56,7 @@ The website allows you to perform the following functions:
 
 1. Download or clone the repository to your local machine:
 
-`git clone https://github.com/Juudini/ProyectoFinalDebandi.git
+`git clone https://github.com/Juudini/ProyectoFinalJavascript.git
 `
 
 2. Open the project in your preferred development environment.
