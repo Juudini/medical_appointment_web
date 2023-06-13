@@ -27,7 +27,7 @@ export const pedirDNI = () => {
 export const pedirApellido = () => {
     let apellidoIngresado = document.getElementById("inputApellido").value;
     // Almacena el valor a la propiedad "apellido" en datosPaciente{}.
-    datosPaciente.apellido = apellidoIngresado;
+    datosPaciente.apellido = apellidoIngresado.toUpperCase();
     if (
         apellidoIngresado === "" ||
         apellidoIngresado === null ||
@@ -48,7 +48,7 @@ export const pedirApellido = () => {
 export const pedirNombre = () => {
     let nombreIngresado = document.getElementById("inputNombre").value;
     // Almacena el valor a la propiedad "nombre" en datosPaciente{}.
-    datosPaciente.nombre = nombreIngresado;
+    datosPaciente.nombre = nombreIngresado.toUpperCase();
     if (
         nombreIngresado === "" ||
         nombreIngresado === null ||
@@ -69,7 +69,7 @@ export const pedirNombre = () => {
 export const pedirEmail = () => {
     let emailIngresado = document.getElementById("inputEmail").value;
     // Almacena el valor a la propiedad "email" en datosPaciente{}.
-    datosPaciente.email = emailIngresado;
+    datosPaciente.email = emailIngresado.toLowerCase();
     if (
         emailIngresado === "" ||
         emailIngresado === null ||
