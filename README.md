@@ -2,7 +2,7 @@
 <h1>🏥 | Clínica Online Web Project | 🩺</h1>
 <h2>Esta web de gestión de turnos médicos, está desarrollada como parte del proyecto final del curso de JavaScript en Coderhouse. Este proyecto no tiene ánimo de lucro y no se hace responsable del uso que se pueda hacer del mismo. </h2>
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) [![Netlify Status](https://api.netlify.com/api/v1/badges/87d4fe7d-7a52-4110-924a-32cf9595d605/deploy-status)](https://app.netlify.com/sites/juudini-proyecto-final-javascript/deploys)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/Juudini/ProyectoFinalJavascript/blob/main/LICENSE.txt) [![Netlify Status](https://api.netlify.com/api/v1/badges/87d4fe7d-7a52-4110-924a-32cf9595d605/deploy-status)](https://app.netlify.com/sites/juudini-proyecto-final-javascript/deploys)
 
 <h2><a href='https://apimocha.com/paciente/data'>API</a> | <a href='https://juudini-proyecto-final-javascript.netlify.app/'>WEB</a></h2>
 </div>
@@ -26,14 +26,14 @@
      <li>
       <a href="#funciones-disponibles">Funciones Disponibles</a>
      </li>
-	   <li>
+      <li>
       <a href="#lighthouse">Lighthouse</a>
      </li>
      <li>
-      <a href="#feedback">Feedback</a>
+      <a href="#contribuciones">Contribuciones</a>
      </li>
-	   <li>
-      <a href="#autor">Acerca del Autor</a>
+     <li>
+      <a href="#licencia">Licencia</a>
      </li>
   </ol>
 </details>
@@ -119,17 +119,17 @@ Proporciona una funcionalidad de búsqueda para verificar si un paciente se encu
 [![Lighthouse Best Practices Badge](./assets/test_resultados/lighthouse_best-practices.svg)](https://github.com/Juudini/ProyectoFinalDebandi)
 [![Lighthouse SEO Badge](./assets/test_resultados/lighthouse_seo.svg)](https://github.com/Juudini/ProyectoFinalDebandi)
 
-## Feedback
+## Contribuciones
 
-Este proyecto fue creado para el **proyecto final** del curso de **JavaScript** en **Coderhouse**. Si tienes algún comentario o sugerencia, no dudes en contactarme.
+¡Las contribuciones son bienvenidas! Si deseas mejorar esta página o agregar nuevas funcionalidades, siéntete libre de hacer un fork del repositorio y enviar tus propuestas a través de pull requests.
 
-## Autor
+## Licencia
 
--   Debandi Chaves Juan Ignacio (Alumno en Coderhouse)
+Este proyecto está bajo la [Licencia MIT](https://github.com/Juudini/ProyectoFinalJavascript/blob/main/LICENSE.txt). Si utilizas este código, se agradece la atribución.
 
 ## 🔗 Links
 
-[![portfolio](https://img.shields.io/badge/my_portfolio-000?style=for-the-badge&logo=ko-fi&logoColor=white)](https://juudini.github.io/-portfolio/)
+[![portfolio](https://img.shields.io/badge/my_portfolio-000?style=for-the-badge&logo=ko-fi&logoColor=white)](https://juudini-portfolio.netlify.app/)
 [![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/juandebandi/)
 [![twitter](https://img.shields.io/badge/twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white)](https://twitter.com/WatashiJuud)
 
