@@ -2,7 +2,7 @@
 <h1>🏥 | Clínica Online Web Project | 🩺</h1>
 <h2>This medical appointment management website has been developed as part of the final project for the JavaScript course at Coderhouse. This project is non-profit and is not responsible for any use that may be made of it.</h2>
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) [![Netlify Status](https://api.netlify.com/api/v1/badges/87d4fe7d-7a52-4110-924a-32cf9595d605/deploy-status)](https://app.netlify.com/sites/juudini-proyecto-final-javascript/deploys)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/Juudini/ProyectoFinalJavascript/blob/main/LICENSE.txt) [![Netlify Status](https://api.netlify.com/api/v1/badges/87d4fe7d-7a52-4110-924a-32cf9595d605/deploy-status)](https://app.netlify.com/sites/juudini-proyecto-final-javascript/deploys)
 
 <h2><a href='https://apimocha.com/paciente/data'>API</a> | <a href='https://juudini-proyecto-final-javascript.netlify.app/'>WEB</a></h2>
 </div>
@@ -30,10 +30,10 @@
       <a href="#lighthouse">LightHouse</a>
      </li>
      <li>
-      <a href="#feedback">Feedback</a>
+      <a href="#feedback">Contributions</a>
      </li>
-	   <li>
-      <a href="#about-author">About Author</a>
+     <li>
+      <a href="#license">License</a>
      </li>
   </ol>
 </details>
@@ -125,17 +125,19 @@ rovides a search functionality to check if a patient is scheduled. Users can ent
 
 ## Feedback
 
-Este proyecto fue creado para el **proyecto final** del curso de **JavaScript** en **Coderhouse**. Si tienes algún comentario o sugerencia, no dudes en contactarme.
-
 This project was created for the **final project** of the **JavaScript course at Coderhouse.** If you have any comments or suggestions, feel free to contact me.
 
-## About Author
+## Contributions
 
--   Debandi Chaves Juan Ignacio (Student at Coderhouse)
+Contributions are welcome! If you would like to improve this page or add new features, feel free to fork the repository and submit your proposals via pull requests.
+
+## License
+
+This projects is licensed under the [Licencia MIT](https://github.com/Juudini/ProyectoFinalJavascript/blob/main/LICENSE.txt). If you use this code, attribution is appreciated
 
 ## 🔗 Links
 
-[![portfolio](https://img.shields.io/badge/my_portfolio-000?style=for-the-badge&logo=ko-fi&logoColor=white)](https://juudini.github.io/-portfolio/)
+[![portfolio](https://img.shields.io/badge/my_portfolio-000?style=for-the-badge&logo=ko-fi&logoColor=white)](https://juudini-portfolio.netlify.app/)
 [![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/juandebandi/)
 [![twitter](https://img.shields.io/badge/twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white)](https://twitter.com/WatashiJuud)
 
