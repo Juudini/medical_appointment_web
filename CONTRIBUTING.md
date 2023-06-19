@@ -15,13 +15,18 @@ If you have an idea for a new feature or enhancement, we welcome your suggestion
 We encourage and appreciate pull requests from the community. If you'd like to contribute code to the project, please follow these steps:
 
 1. Fork the repository to your own GitHub account.
-2. Create a new branch for your changes.
+2. Switch to the `dev` branch of the repository.
 3. Make your changes, ensuring that your code follows the project's coding conventions.
 4. Test your changes to make sure they work as intended.
 5. Commit your changes with clear and descriptive commit messages.
+   - If the pull request is related to an issue, please mention the issue number in the comments (e.g., #16).
+   - Please prefer clarity over brevity in all cases (variable names, conditions, functions...).
+   - Do not edit files in the `dist/` directory.
 6. Push your branch to your forked repository on GitHub.
-7. [Open a pull request](link_to_pull_request) from your branch to the main repository.
+7. [Open a pull request](link_to_pull_request) from your branch to the `dev` branch of the main repository.
 8. Provide a detailed description of your changes in the pull request, including any relevant context or background information.
+   - Describe the problem in the Pull Request description (of course, you would do it, why do I mention that?)
+9. Thank you for your commitment!
 
 ## Code Style and Conventions
 
