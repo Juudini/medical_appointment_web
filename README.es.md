@@ -38,7 +38,7 @@
   </ol>
 </details>
 
-[![English](https://img.shields.io/badge/language-English-blue.svg)](README.en.md)
+[![English](https://img.shields.io/badge/language-English-blue.svg)](README.md)
 
 ## Descripción del proyecto
 
