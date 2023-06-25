@@ -39,7 +39,7 @@ const viewData = () => {
 
         nombre.textContent = `${newPatient.apellido} ${newPatient.nombre}`;
         area.textContent = selected.area;
-        fecha.textContent = `${selected.day}, ${selected.hora}`;
+        fecha.textContent = `${selected.dia}, ${selected.hora}`;
         obraSocial.textContent = selected.obra;
         telefono.textContent = newPatient.telefono;
 
