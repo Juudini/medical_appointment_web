@@ -8,37 +8,37 @@ import { APPOINTMENT_SCHEDULE, HEALTH_INSURANCES } from "./modules/utils.js";
 // ~~> MOSTRAR ÁREAS en formulario
 let areaSelect = $getById("area");
 APPOINTMENT_SCHEDULE.forEach((s) => {
-    let i = $createEl("option");
-    i.value = s.area;
-    i.innerText = s.area;
-    areaSelect.append(i);
+    let option = $createEl("option");
+    option.value = s.area;
+    option.innerText = s.area;
+    areaSelect.append(option);
 });
 
 // ~~> MOSTRAR DIA en formulario
 let diaSelect = $getById("dia");
 APPOINTMENT_SCHEDULE.forEach((d) => {
-    let i = $createEl("option");
-    i.value = d.dia;
-    i.innerText = d.dia;
-    diaSelect.append(i);
+    let option = $createEl("option");
+    option.value = d.dia;
+    option.innerText = d.dia;
+    diaSelect.append(option);
 });
 
 // ~~> MOSTRAR HORA en formulario
 let horaSelect = $getById("hora");
 APPOINTMENT_SCHEDULE.forEach((h) => {
-    let i = $createEl("option");
-    i.value = h.hora;
-    i.innerText = h.hora;
-    horaSelect.append(i);
+    let option = $createEl("option");
+    option.value = h.hora;
+    option.innerText = h.hora;
+    horaSelect.append(option);
 });
 
 // ~~> MOSTRAR OBRA SOCIAL en formulario
 let obraSelect = $getById("obra");
 HEALTH_INSURANCES.forEach((obra) => {
-    let i = $createEl("option");
-    i.value = obra.nombre;
-    i.innerText = obra.nombre;
-    obraSelect.append(i);
+    let option = $createEl("option");
+    option.value = obra.nombre;
+    option.innerText = obra.nombre;
+    obraSelect.append(option);
 });
 // --> fin Form2 SELECTS
 
@@ -56,10 +56,10 @@ areaSelect.addEventListener("change", () => {
 
     // Agregar opciones al elemento select días
     diasServicio.forEach((d) => {
-        let i = $createEl("option");
-        i.value = d.dia;
-        i.innerText = d.dia;
-        diaSelect.append(i);
+        let option = $createEl("option");
+        option.value = d.dia;
+        option.innerText = d.dia;
+        diaSelect.append(option);
 
         // Al seleccionar el servicio, también se debe actualizar las horas correspondientes al primer día de servicio
         if (d === diasServicio[0]) {
