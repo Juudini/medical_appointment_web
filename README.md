@@ -2,9 +2,9 @@
 <h1>🏥 | Clínica Online Web Project | 🩺</h1>
 <h2>This medical appointment management website has been developed as part of the final project for the JavaScript course at Coderhouse. This project is non-profit and is not responsible for any use that may be made of it.</h2>
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/Juudini/ProyectoFinalJavascript/blob/main/LICENSE.txt) [![Netlify Status](https://api.netlify.com/api/v1/badges/87d4fe7d-7a52-4110-924a-32cf9595d605/deploy-status)](https://app.netlify.com/sites/juudini-proyecto-final-javascript/deploys)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/Juudini/ClinicaOnlineWEB/blob/main/LICENSE.txt) [![Netlify Status](https://api.netlify.com/api/v1/badges/87d4fe7d-7a52-4110-924a-32cf9595d605/deploy-status)](https://app.netlify.com/sites/juudini-clinica-online/deploys)
 
-<h2><a href='https://apimocha.com/paciente/data'>API</a> | <a href='https://juudini-proyecto-final-javascript.netlify.app/'>WEB</a></h2>
+<h2><a href='https://apimocha.com/paciente/data'>API</a> | <a href='https://juudini-clinica-online.netlify.app/'>WEB</a></h2>
 </div>
 
 ![Web API Page](assets/web-api-page.png)
@@ -133,11 +133,13 @@ Contributions are welcome! If you would like to improve this page or add new fea
 
 ## License
 
-This projects is licensed under the [Licencia MIT](https://github.com/Juudini/ProyectoFinalJavascript/blob/main/LICENSE.txt). If you use this code, attribution is appreciated
+This projects is licensed under the [Licencia MIT](https://github.com/Juudini/ClinicaOnlineWEB/blob/main/LICENSE.txt). If you use this code, attribution is appreciated
 
 ## 🔗 Links
 
 [![portfolio](https://img.shields.io/badge/my_portfolio-000?style=for-the-badge&logo=ko-fi&logoColor=white)](https://juandebandi.netlify.app/)
 [![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/juandebandi/)
-[![twitter](https://img.shields.io/badge/twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white)](https://twitter.com/WatashiJuud)
-
+</a>
+<a href="mailto:juudinidev@gmail.com">
+<img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Email">
+</a>
