@@ -1,5 +1,7 @@
 // page~~>LOGIN<~~ Esto pertenece a la Page INDEX.html
 "use strict";
+//Modules
+import { alert } from "./modules/alerts.js";
 
 const USER = { user: "admin", password: "admin" };
 const btnLogin = document.getElementById("btnLogin");
@@ -16,7 +18,6 @@ function login(e) {
 
         //Disabled button
         btnLogin.setAttribute("disabled", "true");
-
         //Alert
         const Toast = Swal.mixin({
             toast: true,
@@ -35,23 +36,7 @@ function login(e) {
         });
     } else {
         password.classList.add("input-error");
-
-        //Alert
-        const Toast = Swal.mixin({
-            toast: true,
-            position: "top",
-            iconColor: "white",
-            customClass: {
-                popup: "colored-toast",
-            },
-            showConfirmButton: false,
-            timer: 1500,
-            timerProgressBar: true,
-        });
-        Toast.fire({
-            icon: "error",
-            title: `Las credenciales no son válidas`,
-        });
+        alert("top", "error", `Invalid credentials`, 1500);
     }
 }
 

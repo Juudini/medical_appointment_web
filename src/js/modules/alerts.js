@@ -1,4 +1,23 @@
 "use strict";
+//~~> Alert Generator
+export const alert = (position, icon, title, timer) => {
+    const Toast = Swal.mixin({
+        toast: true,
+        position: position,
+        iconColor: "white",
+        customClass: {
+            popup: "colored-toast",
+        },
+        showConfirmButton: false,
+        timer: timer,
+        timerProgressBar: true,
+    });
+    Toast.fire({
+        icon: icon,
+        title: title,
+    });
+};
+
 //~~> Add Pattient Alert
 export const addPatientAlert = async () => {
     const Toast = Swal.mixin({
