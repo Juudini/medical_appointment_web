@@ -38,7 +38,7 @@ export const addPatientAlert = async () => {
 };
 
 //~~> Button Alert-Clear Table
-export function vaciarTabla() {
+export function clearTable() {
     Swal.fire({
         title: "¡Estas por vaciar la tabla!",
         width: 600,
@@ -57,7 +57,7 @@ export function vaciarTabla() {
         cancelButtonText: "Cancelar",
     }).then((result) => {
         if (result.isConfirmed) {
-            localStorage.removeItem("Pacientes");
+            localStorage.removeItem("Patients");
             location.reload();
         }
     });

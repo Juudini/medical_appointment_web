@@ -13,56 +13,56 @@ checkUser();
 themeMode();
 //Button Exit
 exitBtnEvent();
-const datosPaciente = JSON.parse(localStorage.getItem("Pacientes")) || [];
-const searchPorLetra = $getById("searchPorLetra");
+const patientData = JSON.parse(localStorage.getItem("Patients")) || [];
+const searchPerLetter = $getById("searchPerLetter");
 
-let arrayDataPatient = [];
+let arrayPatientData = [];
 
-let pacientePrimerDato = {};
+let firstPatientData = {};
 
-datosPaciente.forEach((paciente) => {
-    if (paciente.length > 0) {
-        const primerDato = paciente[0];
-        const dni = primerDato.dni;
-        const nombre = primerDato.nombre;
-        const apellido = primerDato.apellido;
-        const email = primerDato.email;
-        const telefono = primerDato.telefono;
+patientData.forEach((patient) => {
+    if (patient.length > 0) {
+        const firstData = patient[0];
+        const dni = firstData.dni;
+        const nombre = firstData.nombre;
+        const apellido = firstData.apellido;
+        const email = firstData.email;
+        const telefono = firstData.telefono;
 
-        pacientePrimerDato = { dni, apellido, nombre, email, telefono };
+        firstPatientData = { dni, apellido, nombre, email, telefono };
     }
 
-    if (paciente.length > 1) {
-        const segundoDato = paciente[1];
-        const obra = segundoDato.obra;
-        const area = segundoDato.area;
-        const dia = segundoDato.dia;
-        const hora = segundoDato.hora;
+    if (patient.length > 1) {
+        const secondData = patient[1];
+        const obra = secondData.obra;
+        const area = secondData.area;
+        const dia = secondData.dia;
+        const hora = secondData.hora;
 
         const patientAllData = {
-            ...pacientePrimerDato,
+            ...firstPatientData,
             obra,
             area,
             dia,
             hora,
         };
-        arrayDataPatient.push(patientAllData);
+        arrayPatientData.push(patientAllData);
     }
 });
 
-searchPorLetra.addEventListener("input", (event) => {
-    const searchValue = event.target.value.toLowerCase();
+searchPerLetter.addEventListener("input", (e) => {
+    const searchValue = e.target.value.toLowerCase();
 
     if (searchValue.trim() !== "") {
-        const resultados = arrayDataPatient.filter((paciente) =>
-            Object.values(paciente).some(
+        const results = arrayPatientData.filter((patient) =>
+            Object.values(patient).some(
                 (value) =>
                     typeof value === "string" &&
                     value.toLowerCase().includes(searchValue)
             )
         );
         // Obtener el elemento de la tabla existente o crear uno nuevo
-        let table = $getById("resultadoTabla");
+        let table = $getById("tableRes");
         // Limpiar el contenido del tbody
         let tbody = table.querySelector("tbody");
         if (tbody) {
@@ -72,8 +72,8 @@ searchPorLetra.addEventListener("input", (event) => {
             table.appendChild(tbody);
         }
 
-        // Crear las filas de la tabla con datos de resultados
-        resultados.forEach((patient) => {
+        // Crear las filas de la tabla con data de results
+        results.forEach((patient) => {
             const fila = $createEl("tr");
             Object.values(patient).forEach((value) => {
                 const td = $createEl("td");

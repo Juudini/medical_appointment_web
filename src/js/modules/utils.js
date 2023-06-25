@@ -1,5 +1,5 @@
 //Clases
-export class Paciente {
+export class Patient {
     constructor(dni, apellido, nombre, email, telefono) {
         this.dni = dni;
         this.apellido = apellido;
@@ -8,7 +8,7 @@ export class Paciente {
         this.telefono = telefono;
     }
 }
-export class Eleccion {
+export class Choice {
     constructor(area, dia, hora, obra) {
         this.area = area;
         this.dia = dia;
@@ -17,7 +17,7 @@ export class Eleccion {
     }
 }
 //Objetos >FORM 2<
-export const AGENDA_CONSULTAS = [
+export const APPOINTMENT_SCHEDULE = [
     {
         area: "DERMATOLOGÍA",
         dia: "Lunes",
@@ -60,7 +60,7 @@ export const AGENDA_CONSULTAS = [
     },
 ];
 
-export const OBRAS_SOCIALES = [
+export const HEALTH_INSURANCES = [
     { nombre: "PARTICULAR" },
     { nombre: "OSDE" },
     { nombre: "OMINT" },

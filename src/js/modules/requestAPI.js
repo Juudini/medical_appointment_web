@@ -18,9 +18,9 @@ const getData = async () => {
 export const upToLocalStoragePatients = async () => {
     try {
         const data = await getData();
-        let isPacientes = JSON.parse(localStorage.getItem("Pacientes")) || [];
+        let isPacientes = JSON.parse(localStorage.getItem("Patients")) || [];
         localStorage.setItem(
-            "Pacientes",
+            "Patients",
             JSON.stringify([...data, ...isPacientes])
         );
         console.log("LocalStorage loaded 🐇🐇¡¡Successfully!!🐇🐇 ");

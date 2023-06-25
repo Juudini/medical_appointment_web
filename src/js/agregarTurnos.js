@@ -3,7 +3,7 @@
 
 //Modules
 import { $getById } from "./modules/selectors.js";
-import { Paciente, Eleccion } from "./modules/utils.js";
+import { Patient, Choice } from "./modules/utils.js";
 import {
     validateForm,
     validateSelect,
@@ -26,12 +26,12 @@ themeMode();
 //Button Exit
 exitBtnEvent();
 
-// Esto sería: ARRAY_PACIENTES [];
-let ARRAY_PACIENTES = JSON.parse(localStorage.getItem("Pacientes")) || [];
+// Esto sería: ARRAY_PATIENTS [];
+let ARRAY_PATIENTS = JSON.parse(localStorage.getItem("Patients")) || [];
 
 // Definimos en alcance global
-export let datosPaciente = {};
-let datosEleccion = {};
+export let patientData = {};
+let selectedData = {};
 
 // ~~~~>Form1
 const form = $getById("form1");
@@ -85,27 +85,27 @@ const getSelectedData = () => {
     const selects = document.querySelectorAll("#form2 select");
     selects.forEach((s) =>
         ["area", "dia", "hora", "obra"].includes(s.id)
-            ? (datosEleccion[s.id] = s.value.toUpperCase())
+            ? (selectedData[s.id] = s.value.toUpperCase())
             : null
     );
 };
 
 const createPatientObject = () => {
-    const yourSelected = new Eleccion(
-        datosEleccion.area,
-        datosEleccion.dia,
-        datosEleccion.hora,
-        datosEleccion.obra
+    const yourSelected = new Choice(
+        selectedData.area,
+        selectedData.dia,
+        selectedData.hora,
+        selectedData.obra
     );
-    const newPatient = new Paciente(
-        datosPaciente.dni,
-        datosPaciente.apellido,
-        datosPaciente.nombre,
-        datosPaciente.email,
-        datosPaciente.telefono
+    const newPatient = new Patient(
+        patientData.dni,
+        patientData.apellido,
+        patientData.nombre,
+        patientData.email,
+        patientData.telefono
     );
     const patientAndSelected = [newPatient, yourSelected];
-    ARRAY_PACIENTES.push(patientAndSelected);
+    ARRAY_PATIENTS.push(patientAndSelected);
 };
 const showForm2 = () => {
     form2.style.display = "none";
@@ -131,7 +131,7 @@ const isSubmit = (e) => {
 form3.addEventListener("submit", isSubmit);
 
 const upToLocalStorage = () => {
-    localStorage.setItem("Pacientes", JSON.stringify(ARRAY_PACIENTES));
+    localStorage.setItem("Patients", JSON.stringify(ARRAY_PATIENTS));
 };
 
 const showForm3 = () => {
@@ -145,4 +145,4 @@ const buttonsGuides3 = () => {
 // --> fin FORM3
 
 //~~> fix's
-ARRAY_PACIENTES === " " ? localStorage.removeItem("Pacientes") : false;
+ARRAY_PATIENTS === " " ? localStorage.removeItem("Patients") : false;

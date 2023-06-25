@@ -4,6 +4,7 @@
 import { $getById } from "./modules/selectors.js";
 import { alert } from "./modules/alerts.js";
 const USER = { user: "admin", password: "admin" };
+
 const btnLogin = $getById("btnLogin");
 btnLogin.addEventListener("click", login);
 

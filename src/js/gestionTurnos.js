@@ -8,7 +8,7 @@ import { upToLocalStoragePatients } from "./modules/requestAPI.js";
 import { themeMode } from "./modules/themeToggleButton.js";
 import { exitBtnEvent } from "./modules/checkUser.js";
 import {
-    vaciarTabla,
+    clearTable,
     showLoading,
     deletePatientAlert,
 } from "./modules/alerts.js";
@@ -19,51 +19,51 @@ checkUser();
 themeMode();
 // Exit Button
 exitBtnEvent();
-const tablaDatos = $getById("tablaDatos");
+const dataTable = $getById("dataTable");
 
-const verDatos = () => {
-    const PACIENTES = JSON.parse(localStorage.getItem("Pacientes")) || [];
-    tablaDatos.innerHTML = "";
+const viewData = () => {
+    const PATIENTS = JSON.parse(localStorage.getItem("Patients")) || [];
+    dataTable.innerHTML = "";
 
-    PACIENTES.forEach((paciente, index) => {
-        const [nuevoPaciente, eleccion] = paciente;
+    PATIENTS.forEach((patient, index) => {
+        const [newPatient, selected] = patient;
 
-        let pacienteFila = $createEl("tr");
+        let patientRow = $createEl("tr");
         let area = $createEl("td");
         let fecha = $createEl("td");
         let nombre = $createEl("td");
         let obraSocial = $createEl("td");
         let telefono = $createEl("td");
         let eliminar = $createEl("td");
-        let btnEliminar = $createEl("button");
+        let btnDelete = $createEl("button");
 
-        nombre.textContent = `${nuevoPaciente.apellido} ${nuevoPaciente.nombre}`;
-        area.textContent = eleccion.area;
-        fecha.textContent = `${eleccion.dia}, ${eleccion.hora}`;
-        obraSocial.textContent = eleccion.obra;
-        telefono.textContent = nuevoPaciente.telefono;
+        nombre.textContent = `${newPatient.apellido} ${newPatient.nombre}`;
+        area.textContent = selected.area;
+        fecha.textContent = `${selected.day}, ${selected.hora}`;
+        obraSocial.textContent = selected.obra;
+        telefono.textContent = newPatient.telefono;
 
-        // Botón Eliminar paciente
-        btnEliminar.textContent = "Eliminar";
-        btnEliminar.setAttribute("btn-id", index);
-        btnEliminar.classList.add("btn", "btn-danger", "btn-sm");
-        eliminar.appendChild(btnEliminar);
+        // Botón Eliminar patient
+        btnDelete.textContent = "Eliminar";
+        btnDelete.setAttribute("btn-id", index);
+        btnDelete.classList.add("btn", "btn-danger", "btn-sm");
+        eliminar.appendChild(btnDelete);
 
-        //Agregando datos a la fila
-        let datos = [area, fecha, nombre, obraSocial, telefono, eliminar];
-        for (let dato of datos) {
-            pacienteFila.appendChild(dato);
+        //Agregando data a la fila
+        let data = [area, fecha, nombre, obraSocial, telefono, eliminar];
+        for (let element of data) {
+            patientRow.appendChild(element);
         }
-        tablaDatos.appendChild(pacienteFila);
+        dataTable.appendChild(patientRow);
 
-        btnEliminar.addEventListener("click", (e) => {
+        btnDelete.addEventListener("click", (e) => {
             const BTN_ID = e.target.getAttribute("btn-id");
             eliminarPaciente(BTN_ID);
         });
     });
 };
 
-// Button Alert-Clear Table (individual por paciente)
+// Button Alert-Clear Table (individual por patient)
 const eliminarPaciente = (BTN_ID) => {
     Swal.fire({
         title: "¿Estás seguro?",
@@ -82,23 +82,23 @@ const eliminarPaciente = (BTN_ID) => {
     });
 };
 const eliminarConfirmado = (BTN_ID) => {
-    const pacientes = JSON.parse(localStorage.getItem("Pacientes")) || [];
+    const pacientes = JSON.parse(localStorage.getItem("Patients")) || [];
     pacientes.splice(BTN_ID, 1);
-    localStorage.setItem("Pacientes", JSON.stringify(pacientes));
+    localStorage.setItem("Patients", JSON.stringify(pacientes));
     deletePatientAlert();
-    verDatos();
+    viewData();
 };
-//~~> fin Botón eliminar.
+//~~> fin Clear Button.
 
 // Event Clear Table
 const btnVaciarTabla = $getById("btnVaciarTabla");
-btnVaciarTabla.addEventListener("click", vaciarTabla);
+btnVaciarTabla.addEventListener("click", clearTable);
 
 //Botón Llenar Tabla (Cargar pacientes desde API)
-const llenarTabla = $getById("llenarTabla");
-llenarTabla.addEventListener("click", uploadPacientes);
+const fillTable = $getById("fillTable");
+fillTable.addEventListener("click", uploadPatients);
 
-function uploadPacientes() {
+function uploadPatients() {
     let showAlert = showLoading(); // Mostrar el loading y almacenar
     upToLocalStoragePatients().then(() => {
         console.log("🐢🐢¡¡Successful upload to table!!🐢🐢");
@@ -107,4 +107,4 @@ function uploadPacientes() {
     });
 }
 //~~> fin Botón Llenar Tabla.
-verDatos();
+viewData();

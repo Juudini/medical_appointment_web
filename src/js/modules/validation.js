@@ -2,14 +2,14 @@
 "use strict";
 //Modules
 import { $getById } from "./selectors.js";
-import { datosPaciente } from "./../agregarTurnos.js";
+import { patientData } from "./../agregarTurnos.js";
 
 //>INICIO DE FUNCIONES DE VALIDACIÓN<
 //>DNI<
 export const pedirDNI = () => {
     let dniIngresado = $getById("inputDNI").value;
-    // Almacena el valor a la propiedad "dni" en datosPaciente{}
-    datosPaciente.dni = dniIngresado;
+    // Almacena el valor a la propiedad "dni" en patientData{}
+    patientData.dni = dniIngresado;
     if (
         dniIngresado.length !== 8 ||
         !/^\d{8}$/.test(dniIngresado) ||
@@ -27,8 +27,8 @@ export const pedirDNI = () => {
 //>Apellido<
 export const pedirApellido = () => {
     let apellidoIngresado = $getById("inputApellido").value;
-    // Almacena el valor a la propiedad "apellido" en datosPaciente{}.
-    datosPaciente.apellido = apellidoIngresado.toUpperCase();
+    // Almacena el valor a la propiedad "apellido" en patientData{}.
+    patientData.apellido = apellidoIngresado.toUpperCase();
     if (
         apellidoIngresado === "" ||
         apellidoIngresado === null ||
@@ -48,8 +48,8 @@ export const pedirApellido = () => {
 //>Nombre<
 export const pedirNombre = () => {
     let nombreIngresado = $getById("inputNombre").value;
-    // Almacena el valor a la propiedad "nombre" en datosPaciente{}.
-    datosPaciente.nombre = nombreIngresado.toUpperCase();
+    // Almacena el valor a la propiedad "nombre" en patientData{}.
+    patientData.nombre = nombreIngresado.toUpperCase();
     if (
         nombreIngresado === "" ||
         nombreIngresado === null ||
@@ -69,8 +69,8 @@ export const pedirNombre = () => {
 //>E-mail<
 export const pedirEmail = () => {
     let emailIngresado = $getById("inputEmail").value;
-    // Almacena el valor a la propiedad "email" en datosPaciente{}.
-    datosPaciente.email = emailIngresado.toLowerCase();
+    // Almacena el valor a la propiedad "email" en patientData{}.
+    patientData.email = emailIngresado.toLowerCase();
     if (
         emailIngresado === "" ||
         emailIngresado === null ||
@@ -90,8 +90,8 @@ export const pedirEmail = () => {
 //>Teléfono<
 export const pedirTelefono = () => {
     let telefonoIngresado = $getById("inputTelefono").value;
-    // Almacena el valor a la propiedad "telefono" en datosPaciente{}
-    datosPaciente.telefono = telefonoIngresado;
+    // Almacena el valor a la propiedad "telefono" en patientData{}
+    patientData.telefono = telefonoIngresado;
     if (
         telefonoIngresado === "" ||
         telefonoIngresado === null ||

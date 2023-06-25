@@ -3,11 +3,11 @@
 
 //Modules
 import { $getById, $createEl } from "./modules/selectors.js";
-import { AGENDA_CONSULTAS, OBRAS_SOCIALES } from "./modules/utils.js";
+import { APPOINTMENT_SCHEDULE, HEALTH_INSURANCES } from "./modules/utils.js";
 //Form2 SELECTS
 // ~~> MOSTRAR ÁREAS en formulario
 let areaSelect = $getById("area");
-AGENDA_CONSULTAS.forEach((s) => {
+APPOINTMENT_SCHEDULE.forEach((s) => {
     let i = $createEl("option");
     i.value = s.area;
     i.innerText = s.area;
@@ -16,7 +16,7 @@ AGENDA_CONSULTAS.forEach((s) => {
 
 // ~~> MOSTRAR DIA en formulario
 let diaSelect = $getById("dia");
-AGENDA_CONSULTAS.forEach((d) => {
+APPOINTMENT_SCHEDULE.forEach((d) => {
     let i = $createEl("option");
     i.value = d.dia;
     i.innerText = d.dia;
@@ -25,7 +25,7 @@ AGENDA_CONSULTAS.forEach((d) => {
 
 // ~~> MOSTRAR HORA en formulario
 let horaSelect = $getById("hora");
-AGENDA_CONSULTAS.forEach((h) => {
+APPOINTMENT_SCHEDULE.forEach((h) => {
     let i = $createEl("option");
     i.value = h.hora;
     i.innerText = h.hora;
@@ -34,7 +34,7 @@ AGENDA_CONSULTAS.forEach((h) => {
 
 // ~~> MOSTRAR OBRA SOCIAL en formulario
 let obraSelect = $getById("obra");
-OBRAS_SOCIALES.forEach((obra) => {
+HEALTH_INSURANCES.forEach((obra) => {
     let i = $createEl("option");
     i.value = obra.nombre;
     i.innerText = obra.nombre;
@@ -48,7 +48,7 @@ areaSelect.addEventListener("change", () => {
     const areaSeleccionada = areaSelect.value;
 
     // Obtener los días correspondientes al servicio seleccionado
-    const diasServicio = AGENDA_CONSULTAS.filter(
+    const diasServicio = APPOINTMENT_SCHEDULE.filter(
         (d) => d.area === areaSeleccionada
     );
 
@@ -64,7 +64,7 @@ areaSelect.addEventListener("change", () => {
         // Al seleccionar el servicio, también se debe actualizar las horas correspondientes al primer día de servicio
         if (d === diasServicio[0]) {
             // Obtener las horas correspondientes al día seleccionado
-            const horasDiaCorrespondiente = AGENDA_CONSULTAS.filter(
+            const horasDiaCorrespondiente = APPOINTMENT_SCHEDULE.filter(
                 (h) => h.dia === d.dia
             );
 
