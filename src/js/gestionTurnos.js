@@ -2,6 +2,7 @@
 "use strict";
 
 //Modules
+import { $getById, $createEl } from "./modules/selectors.js";
 import { checkUser } from "./modules/checkUser.js";
 import { upToLocalStoragePatients } from "./modules/requestAPI.js";
 import { themeMode } from "./modules/themeToggleButton.js";
@@ -18,7 +19,7 @@ checkUser();
 themeMode();
 // Exit Button
 exitBtnEvent();
-const tablaDatos = document.getElementById("tablaDatos");
+const tablaDatos = $getById("tablaDatos");
 
 const verDatos = () => {
     const PACIENTES = JSON.parse(localStorage.getItem("Pacientes")) || [];
@@ -27,14 +28,14 @@ const verDatos = () => {
     PACIENTES.forEach((paciente, index) => {
         const [nuevoPaciente, eleccion] = paciente;
 
-        let pacienteFila = document.createElement("tr");
-        let area = document.createElement("td");
-        let fecha = document.createElement("td");
-        let nombre = document.createElement("td");
-        let obraSocial = document.createElement("td");
-        let telefono = document.createElement("td");
-        let eliminar = document.createElement("td");
-        let btnEliminar = document.createElement("button");
+        let pacienteFila = $createEl("tr");
+        let area = $createEl("td");
+        let fecha = $createEl("td");
+        let nombre = $createEl("td");
+        let obraSocial = $createEl("td");
+        let telefono = $createEl("td");
+        let eliminar = $createEl("td");
+        let btnEliminar = $createEl("button");
 
         nombre.textContent = `${nuevoPaciente.apellido} ${nuevoPaciente.nombre}`;
         area.textContent = eleccion.area;
@@ -90,11 +91,11 @@ const eliminarConfirmado = (BTN_ID) => {
 //~~> fin Botón eliminar.
 
 // Event Clear Table
-const btnVaciarTabla = document.getElementById("btnVaciarTabla");
+const btnVaciarTabla = $getById("btnVaciarTabla");
 btnVaciarTabla.addEventListener("click", vaciarTabla);
 
 //Botón Llenar Tabla (Cargar pacientes desde API)
-const llenarTabla = document.getElementById("llenarTabla");
+const llenarTabla = $getById("llenarTabla");
 llenarTabla.addEventListener("click", uploadPacientes);
 
 function uploadPacientes() {

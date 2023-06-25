@@ -1,4 +1,6 @@
 "use strict";
+//Modules
+import { $getById } from "./selectors";
 //~~> Botón Para darkMode<~~
 export const themeMode = () => {
     const darkMode = () => {
@@ -23,7 +25,7 @@ export const themeMode = () => {
             lightMode();
         }
     };
-    const toggleBtn = document.getElementById("theme-toggle-button");
+    const toggleBtn = $getById("theme-toggle-button");
     toggleBtn.addEventListener("click", function () {
         isDarkTheme();
     });

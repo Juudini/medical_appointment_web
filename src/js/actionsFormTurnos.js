@@ -2,40 +2,40 @@
 "use strict";
 
 //Modules
+import { $getById, $createEl } from "./modules/selectors.js";
 import { AGENDA_CONSULTAS, OBRAS_SOCIALES } from "./modules/utils.js";
-
 //Form2 SELECTS
 // ~~> MOSTRAR ÁREAS en formulario
-let areaSelect = document.getElementById("area");
+let areaSelect = $getById("area");
 AGENDA_CONSULTAS.forEach((s) => {
-    let i = document.createElement("option");
+    let i = $createEl("option");
     i.value = s.area;
     i.innerText = s.area;
     areaSelect.append(i);
 });
 
 // ~~> MOSTRAR DIA en formulario
-let diaSelect = document.getElementById("dia");
+let diaSelect = $getById("dia");
 AGENDA_CONSULTAS.forEach((d) => {
-    let i = document.createElement("option");
+    let i = $createEl("option");
     i.value = d.dia;
     i.innerText = d.dia;
     diaSelect.append(i);
 });
 
 // ~~> MOSTRAR HORA en formulario
-let horaSelect = document.getElementById("hora");
+let horaSelect = $getById("hora");
 AGENDA_CONSULTAS.forEach((h) => {
-    let i = document.createElement("option");
+    let i = $createEl("option");
     i.value = h.hora;
     i.innerText = h.hora;
     horaSelect.append(i);
 });
 
 // ~~> MOSTRAR OBRA SOCIAL en formulario
-let obraSelect = document.getElementById("obra");
+let obraSelect = $getById("obra");
 OBRAS_SOCIALES.forEach((obra) => {
-    let i = document.createElement("option");
+    let i = $createEl("option");
     i.value = obra.nombre;
     i.innerText = obra.nombre;
     obraSelect.append(i);
@@ -56,7 +56,7 @@ areaSelect.addEventListener("change", () => {
 
     // Agregar opciones al elemento select días
     diasServicio.forEach((d) => {
-        let i = document.createElement("option");
+        let i = $createEl("option");
         i.value = d.dia;
         i.innerText = d.dia;
         diaSelect.append(i);
@@ -72,7 +72,7 @@ areaSelect.addEventListener("change", () => {
 
             // Agregar opciones al elemento select de las horas
             horasDiaCorrespondiente.forEach((h) => {
-                let option = document.createElement("option");
+                let option = $createEl("option");
                 option.value = h.hora;
                 option.innerText = h.hora;
                 horaSelect.append(option);

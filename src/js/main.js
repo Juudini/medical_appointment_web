@@ -1,16 +1,16 @@
 // page~~>LOGIN<~~ Esto pertenece a la Page INDEX.html
 "use strict";
 //Modules
+import { $getById } from "./modules/selectors.js";
 import { alert } from "./modules/alerts.js";
-
 const USER = { user: "admin", password: "admin" };
-const btnLogin = document.getElementById("btnLogin");
+const btnLogin = $getById("btnLogin");
 btnLogin.addEventListener("click", login);
 
 function login(e) {
     e.preventDefault();
-    let user = document.getElementById("user").value;
-    let passw = document.getElementById("password").value;
+    let user = $getById("user").value;
+    let passw = $getById("password").value;
 
     // Verifica las credenciales del usuario
     if (user === USER.user && passw === USER.password) {
@@ -31,8 +31,8 @@ function login(e) {
             title: "Signed in successfully",
         }).then(() => {
             //Actions show page
-            document.getElementById("login-form").style.display = "none";
-            document.getElementById("main-content").style.display = "block";
+            $getById("login-form").style.display = "none";
+            $getById("main-content").style.display = "block";
         });
     } else {
         password.classList.add("input-error");

@@ -1,12 +1,13 @@
 // page ~~>AGREGAR TURNOS<~~ form's validations
 "use strict";
 //Modules
+import { $getById } from "./selectors.js";
 import { datosPaciente } from "./../agregarTurnos.js";
 
 //>INICIO DE FUNCIONES DE VALIDACIÓN<
 //>DNI<
 export const pedirDNI = () => {
-    let dniIngresado = document.getElementById("inputDNI").value;
+    let dniIngresado = $getById("inputDNI").value;
     // Almacena el valor a la propiedad "dni" en datosPaciente{}
     datosPaciente.dni = dniIngresado;
     if (
@@ -25,7 +26,7 @@ export const pedirDNI = () => {
 
 //>Apellido<
 export const pedirApellido = () => {
-    let apellidoIngresado = document.getElementById("inputApellido").value;
+    let apellidoIngresado = $getById("inputApellido").value;
     // Almacena el valor a la propiedad "apellido" en datosPaciente{}.
     datosPaciente.apellido = apellidoIngresado.toUpperCase();
     if (
@@ -46,7 +47,7 @@ export const pedirApellido = () => {
 
 //>Nombre<
 export const pedirNombre = () => {
-    let nombreIngresado = document.getElementById("inputNombre").value;
+    let nombreIngresado = $getById("inputNombre").value;
     // Almacena el valor a la propiedad "nombre" en datosPaciente{}.
     datosPaciente.nombre = nombreIngresado.toUpperCase();
     if (
@@ -67,7 +68,7 @@ export const pedirNombre = () => {
 
 //>E-mail<
 export const pedirEmail = () => {
-    let emailIngresado = document.getElementById("inputEmail").value;
+    let emailIngresado = $getById("inputEmail").value;
     // Almacena el valor a la propiedad "email" en datosPaciente{}.
     datosPaciente.email = emailIngresado.toLowerCase();
     if (
@@ -88,7 +89,7 @@ export const pedirEmail = () => {
 
 //>Teléfono<
 export const pedirTelefono = () => {
-    let telefonoIngresado = document.getElementById("inputTelefono").value;
+    let telefonoIngresado = $getById("inputTelefono").value;
     // Almacena el valor a la propiedad "telefono" en datosPaciente{}
     datosPaciente.telefono = telefonoIngresado;
     if (

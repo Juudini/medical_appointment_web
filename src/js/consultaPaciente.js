@@ -2,6 +2,7 @@
 "use strict";
 
 //Modules
+import { $getById, $createEl } from "./modules/selectors.js";
 import { checkUser } from "./modules/checkUser.js";
 import { themeMode } from "./modules/themeToggleButton.js";
 import { exitBtnEvent } from "./modules/checkUser.js";
@@ -13,7 +14,7 @@ themeMode();
 //Button Exit
 exitBtnEvent();
 const datosPaciente = JSON.parse(localStorage.getItem("Pacientes")) || [];
-const searchPorLetra = document.getElementById("searchPorLetra");
+const searchPorLetra = $getById("searchPorLetra");
 
 let arrayDataPatient = [];
 
@@ -61,21 +62,21 @@ searchPorLetra.addEventListener("input", (event) => {
             )
         );
         // Obtener el elemento de la tabla existente o crear uno nuevo
-        let table = document.getElementById("resultadoTabla");
+        let table = $getById("resultadoTabla");
         // Limpiar el contenido del tbody
         let tbody = table.querySelector("tbody");
         if (tbody) {
             tbody.innerHTML = "";
         } else {
-            tbody = document.createElement("tbody");
+            tbody = $createEl("tbody");
             table.appendChild(tbody);
         }
 
         // Crear las filas de la tabla con datos de resultados
         resultados.forEach((patient) => {
-            const fila = document.createElement("tr");
+            const fila = $createEl("tr");
             Object.values(patient).forEach((value) => {
-                const td = document.createElement("td");
+                const td = $createEl("td");
                 td.textContent = value;
                 fila.appendChild(td);
             });

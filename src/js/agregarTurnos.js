@@ -2,6 +2,7 @@
 "use strict";
 
 //Modules
+import { $getById } from "./modules/selectors.js";
 import { Paciente, Eleccion } from "./modules/utils.js";
 import {
     validateForm,
@@ -33,7 +34,7 @@ export let datosPaciente = {};
 let datosEleccion = {};
 
 // ~~~~>Form1
-const form = document.getElementById("form1");
+const form = $getById("form1");
 
 form.addEventListener("submit", (e) => {
     e.preventDefault();
@@ -61,13 +62,13 @@ const showForm = () => {
     form2.style.display = "block";
 };
 const buttonsGuides = () => {
-    const enableTabs = document.getElementById("btn-form1");
+    const enableTabs = $getById("btn-form1");
     enableTabs.classList.add("active");
 };
 // --> fin FORM1
 
 // ~~~~>Form2
-const form2 = document.getElementById("form2");
+const form2 = $getById("form2");
 
 form2.addEventListener("submit", (e) => {
     e.preventDefault();
@@ -111,13 +112,13 @@ const showForm2 = () => {
     form3.style.display = "block";
 };
 const buttonsGuides2 = () => {
-    const enableTabs2 = document.getElementById("btn-form2");
+    const enableTabs2 = $getById("btn-form2");
     enableTabs2.classList.add("active");
 };
 // --> fin FORM2
 
 // ~~~~>Form3
-const form3 = document.getElementById("form3");
+const form3 = $getById("form3");
 
 const isSubmit = (e) => {
     e.preventDefault();
@@ -138,7 +139,7 @@ const showForm3 = () => {
     form3.style.display = "block";
 };
 const buttonsGuides3 = () => {
-    const enableTabs3 = document.getElementById("btn-form3");
+    const enableTabs3 = $getById("btn-form3");
     enableTabs3.classList.add("active");
 };
 // --> fin FORM3
