@@ -1,6 +1,6 @@
 "use strict";
 //Modules
-import { $getById } from "./selectors";
+import { $getById } from "./selectors.js";
 //~~> Botón Para darkMode<~~
 export const themeMode = () => {
     const darkMode = () => {
