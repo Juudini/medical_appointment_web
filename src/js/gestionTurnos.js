@@ -6,12 +6,17 @@ import { checkUser } from "./modules/checkUser.js";
 import { upToLocalStoragePatients } from "./modules/requestAPI.js";
 import { themeMode } from "./modules/themeToggleButton.js";
 import { exitBtnEvent } from "./modules/checkUser.js";
+import {
+    vaciarTabla,
+    showLoading,
+    deletePatientAlert,
+} from "./modules/alerts.js";
 
 //Check user log
 checkUser();
 //ThemeMode
 themeMode();
-//Button Exit
+// Exit Button
 exitBtnEvent();
 const tablaDatos = document.getElementById("tablaDatos");
 
@@ -57,7 +62,7 @@ const verDatos = () => {
     });
 };
 
-// Botón eliminar (individual por paciente)
+// Button Alert-Clear Table (individual por paciente)
 const eliminarPaciente = (BTN_ID) => {
     Swal.fire({
         title: "¿Estás seguro?",
@@ -79,54 +84,14 @@ const eliminarConfirmado = (BTN_ID) => {
     const pacientes = JSON.parse(localStorage.getItem("Pacientes")) || [];
     pacientes.splice(BTN_ID, 1);
     localStorage.setItem("Pacientes", JSON.stringify(pacientes));
-    const Toast = Swal.mixin({
-        toast: true,
-        position: "top-right",
-        iconColor: "white",
-        customClass: {
-            popup: "colored-toast",
-        },
-        showConfirmButton: false,
-        timer: 1800,
-        timerProgressBar: true,
-    });
-    Toast.fire({
-        icon: "info",
-        title: "Paciente Eliminado",
-    });
+    deletePatientAlert();
     verDatos();
 };
 //~~> fin Botón eliminar.
 
-// Botón Vaciar Tabla
+// Event Clear Table
 const btnVaciarTabla = document.getElementById("btnVaciarTabla");
 btnVaciarTabla.addEventListener("click", vaciarTabla);
-
-function vaciarTabla() {
-    Swal.fire({
-        title: "¡Estas por vaciar la tabla!",
-        width: 600,
-        padding: "3em",
-        color: "#716add",
-        background: "#fff url(./../images/trees.png)",
-        backdrop: `
-            rgba(0,0,123,0.4)
-            url("./../images/nyan-cat.gif")
-            left top
-            no-repeat`,
-        showCancelButton: true,
-        confirmButtonColor: "#716add",
-        cancelButtonColor: "#d33",
-        confirmButtonText: "¡Si, vaciar!",
-        cancelButtonText: "Cancelar",
-    }).then((result) => {
-        if (result.isConfirmed) {
-            localStorage.removeItem("Pacientes");
-            location.reload();
-        }
-    });
-}
-//~~> fin Botón Vaciar Tabla.
 
 //Botón Llenar Tabla (Cargar pacientes desde API)
 const llenarTabla = document.getElementById("llenarTabla");
@@ -138,20 +103,6 @@ function uploadPacientes() {
         console.log("🐢🐢¡¡Successful upload to table!!🐢🐢");
         location.reload();
         Swal.close(showAlert);
-    });
-}
-function showLoading() {
-    return Swal.fire({
-        html:
-            '<div class="sk-folding-cube">' +
-            '<div class="sk-cube1 sk-cube"></div>' +
-            '<div class="sk-cube2 sk-cube"></div>' +
-            '<div class="sk-cube4 sk-cube"></div>' +
-            '<div class="sk-cube3 sk-cube"></div>' +
-            "</div>",
-        title: "Cargando...",
-        color: "#716add",
-        showConfirmButton: false,
     });
 }
 //~~> fin Botón Llenar Tabla.

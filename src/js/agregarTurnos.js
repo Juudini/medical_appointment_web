@@ -16,6 +16,7 @@ import {
 import { checkUser } from "./modules/checkUser.js";
 import { themeMode } from "./modules/themeToggleButton.js";
 import { exitBtnEvent } from "./modules/checkUser.js";
+import { addPatientAlert } from "./modules/alerts.js";
 
 //Check user log
 checkUser();
@@ -121,7 +122,7 @@ const form3 = document.getElementById("form3");
 const isSubmit = (e) => {
     e.preventDefault();
     upToLocalStorage();
-    msgSuccessToPage();
+    addPatientAlert();
     showForm3();
     buttonsGuides3();
     form3.removeEventListener("submit", isSubmit);
@@ -131,23 +132,7 @@ form3.addEventListener("submit", isSubmit);
 const upToLocalStorage = () => {
     localStorage.setItem("Pacientes", JSON.stringify(ARRAY_PACIENTES));
 };
-const msgSuccessToPage = async () => {
-    const Toast = Swal.mixin({
-        toast: true,
-        position: "top-right",
-        iconColor: "white",
-        customClass: {
-            popup: "colored-toast",
-        },
-        showConfirmButton: false,
-        timer: 1800,
-        timerProgressBar: true,
-    });
-    await Toast.fire({
-        icon: "success",
-        title: "¡Agregado con Éxito!",
-    });
-};
+
 const showForm3 = () => {
     form2.style.display = "none";
     form3.style.display = "block";
