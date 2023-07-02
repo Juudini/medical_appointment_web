@@ -8,7 +8,6 @@ import { patientData } from "./../agregarTurnos.js";
 //>DNI<
 export const pedirDNI = () => {
     let dniIngresado = $getById("inputDNI").value;
-    // Almacena el valor a la propiedad "dni" en patientData{}
     patientData.dni = dniIngresado;
     if (
         dniIngresado.length !== 8 ||
@@ -27,7 +26,6 @@ export const pedirDNI = () => {
 //>Apellido<
 export const pedirApellido = () => {
     let apellidoIngresado = $getById("inputApellido").value;
-    // Almacena el valor a la propiedad "apellido" en patientData{}.
     patientData.apellido = apellidoIngresado.toUpperCase();
     if (
         apellidoIngresado === "" ||
@@ -48,7 +46,6 @@ export const pedirApellido = () => {
 //>Nombre<
 export const pedirNombre = () => {
     let nombreIngresado = $getById("inputNombre").value;
-    // Almacena el valor a la propiedad "nombre" en patientData{}.
     patientData.nombre = nombreIngresado.toUpperCase();
     if (
         nombreIngresado === "" ||
@@ -69,7 +66,6 @@ export const pedirNombre = () => {
 //>E-mail<
 export const pedirEmail = () => {
     let emailIngresado = $getById("inputEmail").value;
-    // Almacena el valor a la propiedad "email" en patientData{}.
     patientData.email = emailIngresado.toLowerCase();
     if (
         emailIngresado === "" ||
@@ -90,7 +86,6 @@ export const pedirEmail = () => {
 //>Teléfono<
 export const pedirTelefono = () => {
     let telefonoIngresado = $getById("inputTelefono").value;
-    // Almacena el valor a la propiedad "telefono" en patientData{}
     patientData.telefono = telefonoIngresado;
     if (
         telefonoIngresado === "" ||
@@ -118,14 +113,11 @@ export const eventsInputsForm = () => {
 };
 
 export const validateForm = () => {
-    // Validación de los campos individualmente
     const isDNIValido = pedirDNI();
     const isApellidoValido = pedirApellido();
     const isNombreValido = pedirNombre();
     const isEmailValido = pedirEmail();
     const isTelefonoValido = pedirTelefono();
-
-    // Verificar los campos si son válidos
     if (
         isDNIValido &&
         isApellidoValido &&
