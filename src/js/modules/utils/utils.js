@@ -1,22 +1,4 @@
-//Clases
-export class Patient {
-    constructor(dni, apellido, nombre, email, telefono) {
-        this.dni = dni;
-        this.apellido = apellido;
-        this.nombre = nombre;
-        this.email = email;
-        this.telefono = telefono;
-    }
-}
-export class Choice {
-    constructor(area, dia, hora, obra) {
-        this.area = area;
-        this.dia = dia;
-        this.hora = hora;
-        this.obra = obra;
-    }
-}
-//Objetos >FORM 2<
+//Objects >FORM 2<
 export const APPOINTMENT_SCHEDULE = [
     {
         area: "DERMATOLOGÍA",
