@@ -6,4 +6,10 @@ export class Patient {
         this.email = email;
         this.telefono = telefono;
     }
+    updateTelefono(newTelefono) {
+        this.telefono = newTelefono;
+    }
+    updateEmail(newEmail) {
+        this.email = newEmail;
+    }
 }
