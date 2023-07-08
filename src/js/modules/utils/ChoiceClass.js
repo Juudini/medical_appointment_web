@@ -5,4 +5,13 @@ export class Choice {
         this.hora = hora;
         this.obra = obra;
     }
+    updateObra(newObra) {
+        this.obra = newObra;
+    }
+    updateDia(newDia) {
+        this.dia = newDia;
+    }
+    updateHora(newHora) {
+        this.hora = newHora;
+    }
 }
