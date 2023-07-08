@@ -2,8 +2,9 @@
 "use strict";
 
 //Modules
-import { $getById } from "./modules/selectors.js";
-import { Patient, Choice } from "./modules/utils.js";
+import { $getById } from "./modules/utils/selectors.js";
+import { Patient } from "./modules/utils/PatientClass.js";
+import { Choice } from "./modules/utils/ChoiceClass.js";
 import {
     validateForm,
     validateSelect,
@@ -17,7 +18,7 @@ import {
 import { checkUser } from "./modules/checkUser.js";
 import { themeMode } from "./modules/themeToggleButton.js";
 import { exitBtnEvent } from "./modules/checkUser.js";
-import { addPatientAlert } from "./modules/alerts.js";
+import { addPatientAlert } from "./modules/utils/alerts.js";
 
 //Check user log
 checkUser();

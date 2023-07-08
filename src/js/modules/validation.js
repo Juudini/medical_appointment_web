@@ -1,7 +1,7 @@
 // page ~~>AGREGAR TURNOS<~~ form's validations
 "use strict";
 //Modules
-import { $getById } from "./selectors.js";
+import { $getById } from "./utils/selectors.js";
 import { patientData } from "./../agregarTurnos.js";
 
 //>INICIO DE FUNCIONES DE VALIDACIÓN<

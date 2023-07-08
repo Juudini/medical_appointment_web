@@ -2,8 +2,11 @@
 "use strict";
 
 //Modules
-import { $getById, $createEl } from "./modules/selectors.js";
-import { APPOINTMENT_SCHEDULE, HEALTH_INSURANCES } from "./modules/utils.js";
+import { $getById, $createEl } from "./modules/utils/selectors.js";
+import {
+    APPOINTMENT_SCHEDULE,
+    HEALTH_INSURANCES,
+} from "./modules/utils/utils.js";
 //Form2 SELECTS
 // ~~> MOSTRAR ÁREAS en formulario
 let areaSelect = $getById("area");

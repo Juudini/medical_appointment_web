@@ -2,7 +2,7 @@
 "use strict";
 
 //Modules
-import { $getById, $createEl } from "./modules/selectors.js";
+import { $getById, $createEl } from "./modules/utils/selectors.js";
 import { checkUser } from "./modules/checkUser.js";
 import { themeMode } from "./modules/themeToggleButton.js";
 import { exitBtnEvent } from "./modules/checkUser.js";

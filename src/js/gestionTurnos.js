@@ -2,7 +2,7 @@
 "use strict";
 
 //Modules
-import { $getById, $createEl } from "./modules/selectors.js";
+import { $getById, $createEl } from "./modules/utils/selectors.js";
 import { checkUser } from "./modules/checkUser.js";
 import { upToLocalStoragePatients } from "./modules/requestAPI.js";
 import { themeMode } from "./modules/themeToggleButton.js";
@@ -11,7 +11,7 @@ import {
     clearTable,
     showLoading,
     deletePatientAlert,
-} from "./modules/alerts.js";
+} from "./modules/utils/alerts.js";
 
 //Check user log
 checkUser();
