@@ -32,7 +32,7 @@ const viewData = () => {
         let area = $createEl("td");
         let fecha = $createEl("td");
         let nombre = $createEl("td");
-        let obraSocial = $createEl("td");
+        let email = $createEl("td");
         let telefono = $createEl("td");
         let eliminar = $createEl("td");
         let btnDelete = $createEl("button");
@@ -40,7 +40,7 @@ const viewData = () => {
         nombre.textContent = `${newPatient.apellido} ${newPatient.nombre}`;
         area.textContent = selected.area;
         fecha.textContent = `${selected.dia}, ${selected.hora}`;
-        obraSocial.textContent = selected.obra;
+        email.textContent = newPatient.email;
         telefono.textContent = newPatient.telefono;
 
         // Botón Eliminar patient
@@ -50,7 +50,7 @@ const viewData = () => {
         eliminar.appendChild(btnDelete);
 
         //Agregando data a la fila
-        let data = [area, fecha, nombre, obraSocial, telefono, eliminar];
+        let data = [area, fecha, nombre, email, telefono, eliminar];
         for (let element of data) {
             patientRow.appendChild(element);
         }
