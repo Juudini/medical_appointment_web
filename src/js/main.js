@@ -1,8 +1,9 @@
 // page~~>LOGIN<~~ Esto pertenece a la Page INDEX.html
 "use strict";
 //Modules
-import { $getById } from "./modules/selectors.js";
-import { alert } from "./modules/alerts.js";
+
+import { $getById } from "./utils/selectors.js";
+import { alert } from "./utils/alerts.js";
 const USER = { user: "admin", password: "admin" };
 
 const btnLogin = $getById("btnLogin");
