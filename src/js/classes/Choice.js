@@ -5,6 +5,9 @@ export class Choice {
         this.hora = hora;
         this.obra = obra;
     }
+    updateArea(newArea) {
+        this.obra = newArea;
+    }
     updateObra(newObra) {
         this.obra = newObra;
     }
