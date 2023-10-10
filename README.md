@@ -9,7 +9,7 @@
 
 ![Web API Page](assets/web-api-page.png)
 
-<details>
+<details open>
   <summary>Índice</summary>
   <ol>
      <li>
